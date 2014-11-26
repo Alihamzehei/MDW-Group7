@@ -65,7 +65,8 @@ namespace MDW_GuessNumberGame
         
         [OperationContract]
         void SendMessage(Player p1, string message);
-
+        [OperationContract]
+        void GetOnlinePlayer(List<Player>onlinePlayerList);
         
     }
 
