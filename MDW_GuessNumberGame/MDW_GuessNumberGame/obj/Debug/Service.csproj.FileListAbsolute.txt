@@ -6,3 +6,5 @@ C:\Users\Joy\Documents\GitHub\MDW-Group7\MDW_GuessNumberGame\MDW_GuessNumberGame
 C:\Users\Joy\Documents\GitHub\MDW-Group7\MDW_GuessNumberGame\MDW_GuessNumberGame\bin\Debug\mysql.data.dll
 C:\Users\Joy\Documents\GitHub\MDW-Group7\MDW_GuessNumberGame\MDW_GuessNumberGame\obj\Debug\MDW_GuessNumberGame.dll
 C:\Users\Joy\Documents\GitHub\MDW-Group7\MDW_GuessNumberGame\MDW_GuessNumberGame\obj\Debug\MDW_GuessNumberGame.pdb
+E:\ICT 4th year\MDW\MDW-Group7\MDW_GuessNumberGame\MDW_GuessNumberGame\obj\Debug\MDW_GuessNumberGame.dll
+E:\ICT 4th year\MDW\MDW-Group7\MDW_GuessNumberGame\MDW_GuessNumberGame\obj\Debug\MDW_GuessNumberGame.pdb
