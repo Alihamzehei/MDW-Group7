@@ -11,13 +11,18 @@ namespace Server
     public interface IGame
     {
         [OperationContract]
-        bool guessNumber(int[] number);
+        bool checkNumber(int[] number);
 
-       
+        [OperationContract]
+        int[] createNumber();
 
         [OperationContract]
         void CountGuessTime();
 
+        [OperationContract]
+        bool quitGame(Player player);
+
+        
         
         
 
