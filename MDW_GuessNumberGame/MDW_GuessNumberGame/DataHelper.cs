@@ -30,7 +30,32 @@ namespace GameContract
             {
                 return true;
             }
+            connection.Close();
             return false;
+        }
+
+        public bool UserLogin(string username, string password)
+        {
+            String sql = "SELECT username, password FROM User WHERE username = '" + username + "' AND " + "password = '" + password + "';";
+            OleDbCommand command = new OleDbCommand(sql, connection);
+
+                connection.Open();
+                OleDbDataReader reader = command.ExecuteReader();
+                int count = 0;
+                while (reader.Read())
+                {
+                    count++;
+                }
+                if (count >= 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    connection.Close();
+                    return false;
+                }
+
         }
 
         public bool UserRegister(string userID, string passWord)
