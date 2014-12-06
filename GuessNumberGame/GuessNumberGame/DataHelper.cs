@@ -14,7 +14,7 @@ namespace Server
         public DataHelper()
         {
             String provider = "Provider=Microsoft.ACE.OLEDB.12.0";
-            String databaseInfo = "Data Source=" + @"C:\Users\Joy\Documents\GitHub\MDW-Group7\MDW_GuessNumberGame";
+            String databaseInfo = "Data Source=" + @"C:\Users\Joy\Documents\GitHub\MDW-Group7";
             String connectionInfo = provider + ";" + databaseInfo;
             connection = new OleDbConnection(connectionInfo);
         }
