@@ -78,6 +78,7 @@
             this.bt_login.TabIndex = 4;
             this.bt_login.Text = "Login";
             this.bt_login.UseVisualStyleBackColor = true;
+            this.bt_login.Click += new System.EventHandler(this.bt_login_Click);
             // 
             // bt_Cancel
             // 

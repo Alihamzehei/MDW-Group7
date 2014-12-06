@@ -34,5 +34,10 @@ namespace Client
         {
             this.Close();
         }
+
+        private void bt_login_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
