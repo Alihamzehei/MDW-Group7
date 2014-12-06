@@ -12,14 +12,20 @@ namespace Server
     {
         public List<Player> avaliablePlayers;
         public List<Player> GetPlayerList();
+        private Player inviter;
+        private Player receiver;
 
         public void StartGame(Player p1, Player p2)
         { }//if InvitePlayer() is true put two player in the game
         public void CountGuessTime()
         {
+
         }
 
-        public bool InvitePlayer(Player p1, Player p2) { return false; }
+        public bool InvitePlayer(Player send, Player receive)
+        {
+            return false;
+        }
 
         public String CheckNumber(int[] a) { return null; }
 
@@ -86,8 +92,7 @@ namespace Server
             avaliablePlayers.Remove(p);
         }
 
-        public bool CheckUser()
-        { return false; }
+      
 
         public bool UserRegister(string userID, string passWord)
         {
