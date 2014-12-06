@@ -19,6 +19,32 @@ namespace MDW_GuessNumberGame
             connection = new OleDbConnection(connectionInfo);
         }
 
+        public bool IsExistingUser(String username)
+        {
+            String sql = "SELECT username From User" + username + "';";
+            OleDbCommand command = new OleDbCommand(sql, connection);
+
+            connection.Open();
+            OleDbDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public void UserRegister(string userID, string passWord)
+        {
+            if (IsExistingUser(userID) == false)
+            {
+                String sql = "INSERT INTO User(username,password)VALUES('" + userID + "," + passWord + "');";
+                OleDbCommand command = new OleDbCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = sql;
+                command.Connection = connection;
+            }
+        }
+
 
     }
 }
