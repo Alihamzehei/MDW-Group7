@@ -25,6 +25,7 @@ namespace MDW_GuessNumberGame
         public string PassWord
         { }
 
+
     }
     [DataContract]
     public class Number
@@ -49,6 +50,8 @@ namespace MDW_GuessNumberGame
         { return false; }
 
     }
+
+    
     [ServiceContract]
     public interface IGame
     {
@@ -65,10 +68,18 @@ namespace MDW_GuessNumberGame
         
         [OperationContract]
         void SendMessage(Player p1, string message);
-        [OperationContract]
-        void GetOnlinePlayer(List<Player>onlinePlayerList);
+
         
     }
 
+    [ServiceContract]
+    public interface IPortalCallBack
+    {
+        [OperationContract]
+        void UserLogin(string userID, string passWord);
+
+        [OperationContract]
+        void UserRegister(string userID, string passWord);
+    }
     
 }
