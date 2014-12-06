@@ -16,5 +16,18 @@ namespace Client
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_register_Click(object sender, EventArgs e)
+        {
+            String username = this.tb_username.ToString();
+            String password = this.tb_password.ToString();
+            String repassword = this.tb_repassword.ToString();
+            
+        }
     }
 }
