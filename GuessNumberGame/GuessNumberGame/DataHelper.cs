@@ -33,11 +33,11 @@ namespace Server
             return false;
         }
 
-        public bool UserRegister(string userID, string passWord)
+        public bool UserRegister(string userName, string password)
         {
-            if (IsExistingUser(userID) == false)
+            if (IsExistingUser(userName) == false)
             {
-                String sql = "INSERT INTO User(username,password)VALUES('" + userID + "," + passWord + "');";
+                String sql = "INSERT INTO User(username,password)VALUES('" + userName + "," + password + "');";
                 OleDbCommand command = new OleDbCommand();
                 command.CommandType = CommandType.Text;
                 command.CommandText = sql;
@@ -48,6 +48,24 @@ namespace Server
             {
                 return false;
             }
+        }
+
+        public bool IsValidLogin(string userName, string password)
+        {
+            String sql = "SELECT username, password FROM User WHERE playerName = '" + userName + "' AND " + "password = '" + password + "';";
+            OleDbCommand command = new OleDbCommand(sql, connection);
+
+           
+                connection.Open();
+                OleDbDataReader reader = command.ExecuteReader();
+                int count = 0;
+                while (reader.Read())
+                {
+                    count++;
+                }
+                if (count >= 1)
+                {  return true;}else{return false;}
+
         }
     }
 }
