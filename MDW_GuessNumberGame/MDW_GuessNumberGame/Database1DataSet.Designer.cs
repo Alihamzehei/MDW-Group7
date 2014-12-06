@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace MDW_GuessNumberGame {
+namespace GuessNumberService {
     
     
     /// <summary>
@@ -635,7 +635,7 @@ namespace MDW_GuessNumberGame {
         }
     }
 }
-namespace MDW_GuessNumberGame.Database1DataSetTableAdapters {
+namespace GuessNumberService.Database1DataSetTableAdapters {
     
     
     /// <summary>
@@ -792,7 +792,7 @@ namespace MDW_GuessNumberGame.Database1DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::MDW_GuessNumberGame.Properties.Settings.Default.Database1ConnectionString;
+            this._connection.ConnectionString = global::GuessNumberService.Properties.Settings.Default.Database1ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

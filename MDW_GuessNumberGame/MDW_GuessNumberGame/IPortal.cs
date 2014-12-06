@@ -8,28 +8,8 @@ using System.Runtime.Serialization;
 
 
 namespace MDW_GuessNumberGame
-{   
-    [DataContract]
-    public class Player
-    {
-        [DataMember]
-        public string userName;
-
-        [DataMember]
-        public string password;
-
-        [DataMember]
-        public bool loggedIn;
-
-        [DataMember]
-        public Player opponent;
-
-        //players have a callback, so we can callback methods for them
-        [DataMember]
-        public IPortalCallBack PortalCallBack { get; set; }
-           
-    }
-    [ServiceContract(Namespace = "Service", CallbackContract = typeof(IPortalCallBack))]
+{
+    [ServiceContract(Namespace = "MDW_GuessNumberGame", CallbackContract = typeof(IPortalCallBack))]
     public interface IPortal
     {
         //method to register a user

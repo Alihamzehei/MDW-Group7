@@ -7,7 +7,7 @@ using System.Text;
 using System.Data.OleDb;
 
 
-namespace MDW_GuessNumberGame
+namespace GuessNumberService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
 
