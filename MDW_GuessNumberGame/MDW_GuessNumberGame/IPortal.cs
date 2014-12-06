@@ -4,22 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
+using System.Runtime.Serialization;
 
-namespace GameContract
+namespace Service
 {
-    [ServiceContract(Namespace = "GameContract", CallbackContract = typeof(IPortalCallBack))]
-    public interface IPortal
+
+    [DataContract]
+    public class Player
     {
-    [OperationContract]
-    bool UserRegister(string userID, string passWord);
+        [DataMember]
+        public string userName;
+
+        [DataMember]
+        public string password;
+
+        [DataMember]
+        public bool loggedIn;
+
+        [DataMember]
+        public Player opponent;
+
     }
-
-    public interface IPortalCallBack
-   {
-    [OperationContract]
-    void UserLogin(string userID, string passWord);
-
-    [OperationContract]
-    bool UserRegister(string userID, string passWord);
-   }
 }
