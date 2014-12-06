@@ -94,11 +94,11 @@ namespace Server
 
       
 
-        public bool UserRegister(string userID, string passWord)
+        public bool UserRegister(string userName, string password)
         {
 
             DataHelper dataHelper = new DataHelper();
-            return dataHelper.UserRegister(userID, passWord);
+            return dataHelper.UserRegister(userName, password);
 
         }
     }

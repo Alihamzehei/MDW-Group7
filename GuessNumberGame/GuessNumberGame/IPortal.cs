@@ -32,7 +32,7 @@ namespace Server
     {
         //method to register a user
         [OperationContract]
-        bool signUp(string userName, string password);
+        bool UserRegister(string userName, string password);
 
         //method so that a user logs in
         [OperationContract]
@@ -40,20 +40,20 @@ namespace Server
 
         //method used to invite another user
         [OperationContract]
-        bool Invite(string sender, string recipient);
+        bool InvitePlayer(Player send, Player receive);
 
         //methods to log out a user
         [OperationContract]
-        bool logOut(string name);
+        bool UserLogOut(Player P);
 
         //method returns the list of players
         [OperationContract]
-        List<Player> GetlistOfPlayers();
+        List<Player> GetlistOfPlayersinLobby();
 
         
         //method to update the score for a user
         [OperationContract]
-        void onguessChange(string userName, int guessNr);
+        void CountGuessTime();
 
     }
 
@@ -78,7 +78,7 @@ namespace Server
 
         //method for updating the score for the users
         [OperationContract]
-        void onguessChange(int guessNr);
+        void CountGuessTime();
     }
 
 }
