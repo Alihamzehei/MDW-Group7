@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class Register_Form : Form
+    public partial class Register_Form : Form,ServiceReference.IGameCallback
     {
         public Register_Form()
         {
             InitializeComponent();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -27,7 +28,10 @@ namespace Client
             String username = this.tb_username.ToString();
             String password = this.tb_password.ToString();
             String repassword = this.tb_repassword.ToString();
-            
+            if (password == repassword)
+            {
+
+            }
         }
     }
 }
