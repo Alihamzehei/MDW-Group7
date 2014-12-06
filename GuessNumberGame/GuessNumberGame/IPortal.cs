@@ -7,39 +7,78 @@ using System.Text;
 
 namespace Server
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
-    [ServiceContract]
+    [DataContract]
+    public class Player
+    {
+        [DataMember]
+        public string userName;
+
+        [DataMember]
+        public string password;
+
+        [DataMember]
+        public bool loggedIn;
+
+        [DataMember]
+        public Player opponent;
+
+        //players have a callback, so we can callback methods for them
+        [DataMember]
+        public IPortalCallBack PortalCallBack { get; set; }
+    }
+
+    [ServiceContract(Namespace = "Server", CallbackContract = typeof(IPortalCallBack))]
     public interface IPortal
     {
+        //method to register a user
         [OperationContract]
-        string GetData(int value);
+        bool signUp(string userName, string password);
 
+        //method so that a user logs in
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        bool logIn(string userName, string password);
 
-        // TODO: Add your service operations here
+        //method used to invite another user
+        [OperationContract]
+        bool Invite(string sender, string recipient);
+
+        //methods to log out a user
+        [OperationContract]
+        bool logOut(string name);
+
+        //method returns the list of players
+        [OperationContract]
+        List<Player> GetlistOfPlayers();
+
+        
+        //method to update the score for a user
+        [OperationContract]
+        void updateScore(string userName, int pieceNr);
+
     }
 
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    // You can add XSD files into the project. After building the project, you can directly use the data types defined there, with the namespace "GuessNumberGame.ContractType".
-    [DataContract]
-    public class CompositeType
+    public interface IPortalCallBack
     {
-        bool boolValue = true;
-        string stringValue = "Hello ";
+        //To inform a user when an invitation from another player has been recieved
+        [OperationContract]
+        bool OnInvitation(string sender, Player recipient);
 
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
+        //this event will be fired when a user logs in or out,to update the list of the logged in users. 
+        [OperationContract]
+        void OnLoggingInOrOut1(List<Player> loggedInList);
 
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
+        
+        //to show the message to the other user in the chatbox
+        [OperationContract]
+        void messageRecieved(string message);
+
+        //to let the other user know that the player has left the game
+        [OperationContract]
+        void gameInterupted(string message);
+
+        //method for updating the score for the users
+        [OperationContract]
+        void onScoreChange(int pieceNr);
     }
+
 }
