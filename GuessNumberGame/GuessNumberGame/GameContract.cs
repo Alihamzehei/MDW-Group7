@@ -10,22 +10,91 @@ namespace Server
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class GameContract : IPortal
     {
-        public string GetData(int value)
+        public List<Player> avaliablePlayers;
+        public List<Player> GetPlayerList();
+
+        public void StartGame(Player p1, Player p2)
+        { }//if InvitePlayer() is true put two player in the game
+        public void CountGuessTime()
         {
-            return string.Format("You entered: {0}", value);
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public bool InvitePlayer(Player p1, Player p2) { return false; }
+
+        public String CheckNumber(int[] a) { return null; }
+
+        public List<Player> AvaliablePlayers()
         {
-            if (composite == null)
+            return avaliablePlayers;
+        }
+
+        public String ChatMessage(Player player, string message)
+        {
+            return player.userName + ": " + message;
+        }
+
+        public bool CheckUser(Player player)
+        {
+            foreach (Player p in GetPlayerList())
             {
-                throw new ArgumentNullException("composite");
+                if (player.userName == p.userName)
+                {
+                    if (player.password == p.password)
+                    {
+                        AddAvailablePlayer(p);
+                        return true;
+                    }
+                }
             }
-            if (composite.BoolValue)
+            return false;
+        }
+
+        public bool UserLogOut(Player p)
+        {
+            foreach (Player player in avaliablePlayers)
             {
-                composite.StringValue += "Suffix";
+                if (p == player)
+                {
+                    RemoveAvailablePlayer(p);
+                    return true;
+                }
             }
-            return composite;
+            return false;
+        }
+
+        public bool UserRegister(Player player)
+        {
+            foreach (Player p in GetPlayerList())
+            {
+                if (player.userName == p.userName)
+                {
+                    return false;
+                }
+            }
+            return false;//just for compiling
+
+            //TODO if username is unique add player to db
+        }
+
+        public void AddAvailablePlayer(Player p)
+        {
+            avaliablePlayers.Add(p);
+        }
+
+        public void RemoveAvailablePlayer(Player p)
+        {
+            avaliablePlayers.Remove(p);
+        }
+
+        public bool CheckUser()
+        { return false; }
+
+        public bool UserRegister(string userID, string passWord)
+        {
+
+            DataHelper dataHelper = new DataHelper();
+            return dataHelper.UserRegister(userID, passWord);
+
         }
     }
 }
