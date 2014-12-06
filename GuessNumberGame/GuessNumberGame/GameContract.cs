@@ -15,18 +15,21 @@ namespace Server
         private Player inviter;
         private Player receiver;
 
+       //Ali
         public void StartGame(Player p1, Player p2)
         { }//if InvitePlayer() is true put two player in the game
+       
+        //Ali
         public void CountGuessTime()
         {
 
         }
-
+        //JOY
         public bool InvitePlayer(Player send, Player receive)
         {
             return false;
         }
-
+        //ZHIWEI
         public String CheckNumber(int[] a) { return null; }
 
         public List<Player> AvaliablePlayers()
@@ -34,6 +37,7 @@ namespace Server
             return avaliablePlayers;
         }
 
+        //George
         public String ChatMessage(Player player, string message)
         {
             return player.userName + ": " + message;
@@ -89,5 +93,8 @@ namespace Server
             return dataHelper.UserRegister(userName, password);
 
         }
+        //JOY LOGIN
+
+        //JOY AND ZHIWEI DO REFERENCE
     }
 }
