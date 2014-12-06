@@ -10,17 +10,11 @@ using System.Data.OleDb;
 namespace GameContract
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
-    public class GameContract : IGame,IPortal
+
+    public class GameContract : IGame, IPortal
     {
-        private List<Player> avaliablePlayers;
-        private Player player1;
-        private Player player2;
-        private string username;
-        private string password;
-        public List<Player> GetPlayerList()
-        {
-            return null;
-        }
+        public List<Player> avaliablePlayers;
+        public List<Player> GetPlayerList();
 
         public void StartGame(Player p1,Player p2)
         { }//if InvitePlayer() is true put two player in the game
@@ -32,11 +26,68 @@ namespace GameContract
 
         public String CheckNumber(int[] a) { return null; }
 
-        public List<Player> AvaliablePlayers() { return null; }
+        public List<Player> AvaliablePlayers() 
+        {
+            return avaliablePlayers;
+        }
 
-        public String ChatMessage(string player, string message)
-        { return null; }
+        public String ChatMessage(Player player, string message)
+        {
+            return player.UserName + ": " + message;
+        }
 
+        public bool CheckUser(Player player)
+        {
+            foreach (Player p in GetPlayerList())
+            {
+                if (player.UserName == p.UserName)
+                {
+                    if (player.PassWord == p.PassWord)
+                    {
+                        AddAvailablePlayer(p);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public bool UserLogOut(Player p)
+        {
+            foreach (Player player in avaliablePlayers)
+            {
+                if (p == player)
+                {
+                    RemoveAvailablePlayer(p);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool UserRegister(Player player) 
+        {
+            foreach (Player p in GetPlayerList())
+            {
+                if (player.UserName == p.UserName)
+                {
+                    return false;
+                }
+            }
+            return false;//just for compiling
+
+            //TODO if username is unique add player to db
+        }
+
+        public void AddAvailablePlayer(Player p)
+        {
+            avaliablePlayers.Add(p);
+        }
+
+        public void RemoveAvailablePlayer(Player p)
+        {
+            avaliablePlayers.Remove(p);
+        }
 
         public bool CheckUser()
         { return false; }
@@ -48,8 +99,5 @@ namespace GameContract
             return dataHelper.UserRegister(userID, passWord);
             
         }
-      
-        
-        
     }
 }
