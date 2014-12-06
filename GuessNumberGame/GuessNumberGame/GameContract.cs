@@ -68,19 +68,7 @@ namespace Server
             return false;
         }
 
-        public bool UserRegister(Player player)
-        {
-            foreach (Player p in GetPlayerList())
-            {
-                if (player.userName == p.userName)
-                {
-                    return false;
-                }
-            }
-            return false;//just for compiling
-
-            //TODO if username is unique add player to db
-        }
+        
 
         public void AddAvailablePlayer(Player p)
         {
