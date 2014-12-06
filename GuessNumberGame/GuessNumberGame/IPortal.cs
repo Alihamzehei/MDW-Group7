@@ -78,7 +78,7 @@ namespace Server
 
         //method for updating the score for the users
         [OperationContract]
-        void onScoreChange(int pieceNr);
+        void onguessChange(int guessNr);
     }
 
 }
