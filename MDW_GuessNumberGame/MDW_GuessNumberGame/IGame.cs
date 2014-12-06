@@ -79,7 +79,7 @@ namespace MDW_GuessNumberGame
         void UserLogin(string userID, string passWord);
 
         [OperationContract]
-        void UserRegister(string userID, string passWord);
+        bool UserRegister(string userID, string passWord);
     }
     
 }
