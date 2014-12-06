@@ -43,6 +43,7 @@ namespace MDW_GuessNumberGame
 
         void UserRegister(string userID, string passWord) {
             DataHelper dataHelper = new DataHelper();
+            dataHelper.UserRegister(userID, passWord);
             
         }
       
