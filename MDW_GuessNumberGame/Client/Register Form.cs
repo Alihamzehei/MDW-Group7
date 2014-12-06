@@ -27,6 +27,7 @@ namespace Client
             String username = this.tb_username.ToString();
             String password = this.tb_password.ToString();
             String repassword = this.tb_repassword.ToString();
+            
         }
     }
 }
