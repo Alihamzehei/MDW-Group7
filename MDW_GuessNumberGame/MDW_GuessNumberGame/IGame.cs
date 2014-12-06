@@ -13,20 +13,25 @@ namespace MDW_GuessNumberGame
     {
         string userName;
         string passWord;
+        IGameCallBack callback;
 
-        public Player(string userName, string passWord)
+        public Player(string userName, string passWord, IGameCallBack cb)
         {
+            this.userName = userName;
+            this.passWord = passWord;
+            this.callback=cb;
         }
 
         [DataMember]
         public string UserName
-        { }
+        { get; set; }
         [DataMember]
         public string PassWord
-        { }
+        { get; set; }
 
 
     }
+
     [DataContract]
     public class Number
     {
@@ -41,11 +46,9 @@ namespace MDW_GuessNumberGame
 
         public void CreateGuessNumber()
         {
-            for(int i=0; i<4;i++)
-            {
-                
-            }
+            Random rnd = new Random(9999);
         }
+        
         public bool CheckGuessNumber()
         { return false; }
 
