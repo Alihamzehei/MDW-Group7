@@ -10,7 +10,7 @@ using System.Data.OleDb;
 namespace MDW_GuessNumberGame
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
-    public class GameContract : IGame
+    public class GameContract : IGame,IPortal
     {
         private List<Player> avaliablePlayers;
         private Player player1;
@@ -40,6 +40,11 @@ namespace MDW_GuessNumberGame
 
         public bool CheckUser()
         { return false; }
+
+        void UserRegister(string userID, string passWord) {
+            DataHelper dataHelper = new DataHelper();
+            
+        }
       
         
         
