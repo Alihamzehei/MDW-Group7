@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="45285a4b-f0fc-4b0b-9727-91a7e872ed98" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/GameContract/IGame/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MDW_GuessNumberGame.wsdl" MetadataType="Wsdl" ID="6d0e7e3b-2aa7-46d8-90ba-eb29a3eb6bce" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/GameContract/IGame/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d05d422f-bae9-4dce-aa37-2c15b04f3830" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/GameContract/IGame/mex" />
+    <MetadataFile FileName="MDW_GuessNumberGame.xsd" MetadataType="Schema" ID="94d89ae9-0b71-4b83-aeae-a73eee900495" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/GameContract/IGame/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="d78cfdcb-3b81-434d-8bdf-d7a9d6e54faa" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/GameContract/IGame/mex" />
+    <MetadataFile FileName="GameContract.xsd" MetadataType="Schema" ID="8a8e373e-7fbb-441c-9499-bfc66ea56eb0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/GameContract/IGame/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
