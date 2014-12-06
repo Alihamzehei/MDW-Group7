@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="MDW_GuessNumberGame" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="MDW_GuessNumberGame" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="MDW_GuessNumberGame/Imports">
+      <xsd:import namespace="MDW_GuessNumberGame" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/GameContract" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGame_StartGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartGame" />
+  </wsdl:message>
+  <wsdl:message name="IGame_StartGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGame_CountGuessTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:CountGuessTime" />
+  </wsdl:message>
+  <wsdl:message name="IGame_CountGuessTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CountGuessTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGame_InvitePlayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:InvitePlayer" />
+  </wsdl:message>
+  <wsdl:message name="IGame_InvitePlayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InvitePlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGame_SendMessage_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="IGame_SendMessage_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:SendMessageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGame">
+    <wsdl:operation name="StartGame">
+      <wsdl:input wsaw:Action="MDW_GuessNumberGame/IGame/StartGame" message="tns:IGame_StartGame_InputMessage" />
+      <wsdl:output wsaw:Action="MDW_GuessNumberGame/IGame/StartGameResponse" message="tns:IGame_StartGame_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CountGuessTime">
+      <wsdl:input wsaw:Action="MDW_GuessNumberGame/IGame/CountGuessTime" message="tns:IGame_CountGuessTime_InputMessage" />
+      <wsdl:output wsaw:Action="MDW_GuessNumberGame/IGame/CountGuessTimeResponse" message="tns:IGame_CountGuessTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InvitePlayer">
+      <wsdl:input wsaw:Action="MDW_GuessNumberGame/IGame/InvitePlayer" message="tns:IGame_InvitePlayer_InputMessage" />
+      <wsdl:output wsaw:Action="MDW_GuessNumberGame/IGame/InvitePlayerResponse" message="tns:IGame_InvitePlayer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <wsdl:output wsaw:Action="MDW_GuessNumberGame/IGame/SendMessage" message="tns:IGame_SendMessage_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="MDW_GuessNumberGame/IGame/SendMessageResponse" message="tns:IGame_SendMessage_InputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
