@@ -5,11 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
 
-namespace MDW_GuessNumberGame
-{   [ServiceContract(Namespace="GameContract",CallbackContract = typeof(IPortalCallBack)) ]
-    interface IPortal
+namespace GameContract
+{
+    [ServiceContract(Namespace = "GameContract", CallbackContract = typeof(IPortalCallBack))]
+    public interface IPortal
     {
     [OperationContract]
     bool UserRegister(string userID, string passWord);
     }
+
+    public interface IPortalCallBack
+   {
+    [OperationContract]
+    void UserLogin(string userID, string passWord);
+
+    [OperationContract]
+    bool UserRegister(string userID, string passWord);
+   }
 }

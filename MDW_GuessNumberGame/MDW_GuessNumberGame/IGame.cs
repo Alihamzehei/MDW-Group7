@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 
-namespace MDW_GuessNumberGame
+namespace GameContract
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [DataContract]
@@ -57,8 +57,8 @@ namespace MDW_GuessNumberGame
 
     }
 
-    
-    [ServiceContract]
+
+    [ServiceContract(Namespace = "MDW_GuessNumberGame", CallbackContract = typeof(IGameCallBack))]
     public interface IGame
     {
         [OperationContract]
@@ -68,7 +68,7 @@ namespace MDW_GuessNumberGame
         [OperationContract]
         bool InvitePlayer(Player p1, Player p2);
     }
-    [ServiceContract]
+    
     public interface IGameCallBack
     {
         
@@ -78,14 +78,6 @@ namespace MDW_GuessNumberGame
         
     }
 
-    [ServiceContract]
-    public interface IPortalCallBack
-    {
-        [OperationContract]
-        void UserLogin(string userID, string passWord);
 
-        [OperationContract]
-        bool UserRegister(string userID, string passWord);
-    }
     
 }

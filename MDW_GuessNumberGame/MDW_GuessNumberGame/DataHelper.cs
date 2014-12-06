@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Data;
 
-namespace MDW_GuessNumberGame
+namespace GameContract
 {
     class DataHelper
     {
