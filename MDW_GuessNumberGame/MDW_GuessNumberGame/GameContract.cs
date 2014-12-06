@@ -41,7 +41,8 @@ namespace MDW_GuessNumberGame
         public bool CheckUser()
         { return false; }
 
-        public bool UserRegister(string userID, string passWord) {
+        public bool UserRegister(string userID, string passWord) 
+        {
 
             DataHelper dataHelper = new DataHelper();
             return dataHelper.UserRegister(userID, passWord);
