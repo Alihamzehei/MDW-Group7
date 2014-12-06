@@ -34,24 +34,26 @@ namespace MDW_GuessNumberGame
     {
         //method to register a user
         [OperationContract]
-        bool signUp(string userName, string password);
+        bool signUp(Player p);
 
         //method so that a user logs in
         [OperationContract]
-        bool logIn(string userName, string password);
+        bool logIn(Player p);
 
         //method used to invite another user
         [OperationContract]
-        bool Invite(string sender, string recipient);
+        bool Invite(Player p1, Player p2);
 
         //methods to log out a user
         [OperationContract]
-        bool logOut(string name);
+        void logOut(Player p);
 
         //method returns the list of players
         [OperationContract]
         List<Player> GetlistOfPlayers();
 
+        [OperationContract]
+        string ChatMessage(Player p, string message);
         
         //method to update number of the player's guess
         [OperationContract]
