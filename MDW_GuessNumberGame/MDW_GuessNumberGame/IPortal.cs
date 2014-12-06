@@ -9,6 +9,7 @@ namespace MDW_GuessNumberGame
 {   [ServiceContract(Namespace="MDW_GuessNumberGame",CallbackContract = typeof(IPortalCallBack)) ]
     interface IPortal
     {
+    [OperationContract]
     bool UserRegister(string userID, string passWord);
     }
 }
