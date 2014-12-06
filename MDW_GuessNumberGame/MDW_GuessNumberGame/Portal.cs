@@ -42,6 +42,9 @@ namespace MDW_GuessNumberGame
             return p.UserName + ": " + message;
         }
 
-
+        public void Invite(Player p1, Player p2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
