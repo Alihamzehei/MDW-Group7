@@ -6,9 +6,11 @@ using System.ServiceModel;
 using System.Text;
 using System.Data.OleDb;
 
+
 namespace MDW_GuessNumberGame
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
+
     public class GameContract : IGame, IPortal
     {
         public List<Player> avaliablePlayers;
@@ -85,6 +87,14 @@ namespace MDW_GuessNumberGame
         public void RemoveAvailablePlayer(Player p)
         {
             avaliablePlayers.Remove(p);
+        }
+
+        public bool CheckUser()
+        { return false; }
+
+        void UserRegister(string userID, string passWord) {
+            DataHelper dataHelper = new DataHelper();
+            
         }
     }
 }
