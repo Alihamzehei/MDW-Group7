@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using System.ServiceModel;
 
 namespace MDW_GuessNumberGame
-{   [ServiceContract(Namespace="MDW_GuessNumberGame")]
-    class IPortal
+{   [ServiceContract(Namespace="MDW_GuessNumberGame",CallbackContract = typeof(IPortalCallBack)) ]
+    interface IPortal
     {
 
     }
