@@ -73,13 +73,5 @@ namespace MDW_GuessNumberGame
     }
 
     [ServiceContract]
-    public interface IPortalCallBack
-    {
-        [OperationContract]
-        void UserLogin(string userID, string passWord);
-
-        [OperationContract]
-        void UserRegister(string userID, string passWord);
-    }
     
 }
