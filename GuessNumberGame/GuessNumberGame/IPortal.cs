@@ -53,7 +53,7 @@ namespace Server
         
         //method to update the score for a user
         [OperationContract]
-        void updateScore(string userName, int pieceNr);
+        void onguessChange(string userName, int guessNr);
 
     }
 
@@ -78,7 +78,7 @@ namespace Server
 
         //method for updating the score for the users
         [OperationContract]
-        void onScoreChange(int pieceNr);
+        void onguessChange(int guessNr);
     }
 
 }
