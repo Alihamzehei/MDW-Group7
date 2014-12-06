@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Data.OleDb;
 
+
 namespace MDW_GuessNumberGame
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
@@ -39,7 +40,8 @@ namespace MDW_GuessNumberGame
 
         public bool CheckUser()
         { return false; }
-        public void UserLogin(string userID, string passWord) { }
-        public void UserRegister(string userID, string passWord) { }
+      
+        
+        
     }
 }
