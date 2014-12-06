@@ -20,10 +20,16 @@ namespace MDW_GuessNumberGame
 
         [DataMember]
         public string UserName
-        { }
+        {
+            get { return this.userName; }
+            set { this.userName = value; }
+        }
         [DataMember]
         public string PassWord
-        { }
+        {
+            get { return this.passWord; }
+            set { this.passWord = value; }
+        }
 
 
     }
