@@ -22,7 +22,7 @@ namespace Server
             if (dh.UserRegister(player.userName, player.password))
             {
                 OnlinePlayers.Add(player);
-                player.PortalCallBack.OnLoggingInOrOut1(player);
+                player.PortalCallBack.OnLoggingIn(player);
                 return true;
             }
             else
@@ -43,7 +43,7 @@ namespace Server
 
         public void UserLogOut(Player player)
         {
-            player.PortalCallBack.OnLoggingInOrOut1(player);
+            player.PortalCallBack.OnLoggingOut(player);
             OnlinePlayers.Remove(player);
         }
 

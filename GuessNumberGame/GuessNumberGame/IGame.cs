@@ -7,63 +7,35 @@ using System.Text;
 
 namespace Server
 {
-    [DataMember]
-    public class Number
-    {
-        private int[] arrayNumber;
-
-
-        public Number(int[] arrayNumber, int arrayLength)
-        {
-
-
-        }
-
-        public void CreateGuessNumber()
-        {
-            for (int i = 0; i < 4; i++)
-            {
-
-            }
-        }
-        public bool CheckGuessNumber()
-        { return false; }
-
-    }
-
-
     [ServiceContract(Namespace = "Server", CallbackContract = typeof(IGameCallBack))]
     public interface IGame
     {
         [OperationContract]
-        bool checkNumber(int[] number);
+        string checkNumber(int[] number);
 
         [OperationContract]
-        int[] createNumber();
+        void countGuessTimes();
 
         [OperationContract]
-        void CountGuessTime();
+        void quitGame(Player player);
 
         [OperationContract]
-        bool quitGame(Player player);
+        void winner(Player p);
 
         // TODO: Add your service operations here
     }
 
     public interface IGameCallBack
     {
-
-        [OperationContract]
-        void SendMessage(Player p1, string message);
-
         //to let the other user know that the player has left the game
         [OperationContract]
-        void gameInterupted(string message);
+        void OngameInterupted(string message);
 
         //method for updating the score for the users
         [OperationContract]
-        void CountGuessTime();
+        void OnCountGuessTime();
 
-
+        [OperationContract]
+        void OnWinner(Player p);
     }
 }

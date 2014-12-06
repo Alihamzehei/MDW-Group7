@@ -10,29 +10,46 @@ namespace Server
     [ServiceContract(Namespace = "Server", CallbackContract = typeof(IPortalCallBack))]
     public interface IPortal
     {
-        //method to register a user
+        /// <summary>
+        /// It is used to register a player to DB.
+        /// </summary>
+        /// <param name="p">The player of the game.</param>
+        /// <returns>True for success, false for fail.</returns>
         [OperationContract]
         bool UserRegister(Player p);
 
-        //method so that a user logs in
+        /// <summary>
+        /// It is used to log in a player.
+        /// </summary>
+        /// <param name="p">The player of the game.</param>
+        /// <returns>True for success, false for fail.</returns>
         [OperationContract]
         bool logIn(Player p);
 
-        //method used to invite another user
+        /// <summary>
+        /// Invites the player for a game.
+        /// </summary>
+        /// <param name="send">The sender of invitation.</param>
+        /// <param name="receive">The receiver of invitation.</param>
+        /// <returns>True for acceptance, false for dismissal.</returns>
         [OperationContract]
         bool InvitePlayer(Player send, Player receive);
 
-        //methods to log out a user
+        /// <summary>
+        /// It is used when a player logges out.
+        /// </summary>
+        /// <param name="p">The player of the game.</param>
         [OperationContract]
         void UserLogOut(Player p);
 
+        /// <summary>
+        /// Receives player's message.
+        /// </summary>
+        /// <param name="p">The player of the game.</param>
+        /// <param name="m">The message sent.</param>
+        /// <returns>A string with the player and the sent message.</returns>
         [OperationContract]
         string ChatMessage(Player p, string m);
-        
-        //method to update the score for a user
-        [OperationContract]
-        void CountGuessTime();
-
     }
 
     public interface IPortalCallBack
@@ -43,9 +60,11 @@ namespace Server
 
         //this event will be fired when a user logs in or out,to update the list of the logged in users. 
         [OperationContract]
-        void OnLoggingInOrOut1(Player player);
+        void OnLoggingIn(Player player);
 
-        
+        [OperationContract]
+        void OnLoggingOut(Player p);
+
         //to show the message to the other user in the chatbox
         [OperationContract]
         void messageRecieved(string message);
