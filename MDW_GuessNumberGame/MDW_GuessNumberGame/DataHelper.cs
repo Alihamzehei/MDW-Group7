@@ -33,7 +33,7 @@ namespace MDW_GuessNumberGame
             return false;
         }
 
-        public void UserRegister(string userID, string passWord)
+        public bool UserRegister(string userID, string passWord)
         {
             if (IsExistingUser(userID) == false)
             {
@@ -42,6 +42,10 @@ namespace MDW_GuessNumberGame
                 command.CommandType = CommandType.Text;
                 command.CommandText = sql;
                 command.Connection = connection;
+                return true;
+            }
+            else {
+                return false;
             }
         }
 
