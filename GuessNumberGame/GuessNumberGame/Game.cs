@@ -18,16 +18,42 @@ namespace Server
             guessNumber = new Random();
             guessNumber.Next(0, 9999);
         }
-        
-        public void CountGuessTimes()
+
+        public void countGuessTimes()
         {
             guessTimes++;
         }
 
         //TODO
-        public string CheckNumber(int[] number)
+        public string checkNumber(int playersGuess)
         {
-            CountGuessTimes();
+            countGuessTimes();
+            int A = 0;
+            int B = 0;
+
+            var digits = new List<int>();
+
+            //don't know yet what this piece of code does
+            //source: http://stackoverflow.com/questions/4580261/integer-to-integer-array-c-sharp
+            for (; playersGuess != 0; playersGuess /= 10)
+            {
+                digits.Add(playersGuess % 10);
+            }
+
+            var arr = digits.ToArray();
+            Array.Reverse(arr);
+
+            //TODO
+            throw new NotImplementedException();
+        }
+
+        public void quitGame(Player p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void winner(Player p)
+        {
             throw new NotImplementedException();
         }
     }

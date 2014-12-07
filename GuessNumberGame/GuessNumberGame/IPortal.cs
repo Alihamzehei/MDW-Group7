@@ -47,25 +47,38 @@ namespace Server
         /// </summary>
         /// <param name="p">The player of the game.</param>
         /// <param name="m">The message sent.</param>
-        /// <returns>A string with the player and the sent message.</returns>
         [OperationContract]
-        string ChatMessage(Player p, string m);
+        void ChatMessage(Player p, string m);
     }
 
     public interface IPortalCallBack
     {
-        //To inform a user when an invitation from another player has been recieved
+        /// <summary>
+        /// It is called when a user sends an invitation.
+        /// </summary>
+        /// <param name="sender">The sender of the invitation.</param>
+        /// <returns>True for accept, false for deny.</returns>
         [OperationContract]
         bool OnInvitation(Player sender);
 
-        //this event will be fired when a user logs in or out,to update the list of the logged in users. 
+        /// <summary>
+        /// It is called when a player connects to lobby.
+        /// </summary>
+        /// <param name="player">The new player.</param>
         [OperationContract]
         void OnLoggingIn(Player player);
 
+        /// <summary>
+        /// It is called when a player leaves lobby.
+        /// </summary>
+        /// <param name="p">The leaving player.</param>
         [OperationContract]
         void OnLoggingOut(Player p);
 
-        //to show the message to the other user in the chatbox
+        /// <summary>
+        /// It is called when a player sends a message on chat.
+        /// </summary>
+        /// <param name="message">The sent message INCLUDING player's name.</param>
         [OperationContract]
         void messageRecieved(string message);
     }

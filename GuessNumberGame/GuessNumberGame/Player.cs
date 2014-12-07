@@ -8,7 +8,8 @@ using System.ServiceModel;
 
 namespace Server
 {
-    class Player
+    [DataContract]
+    public class Player
     {
         [DataMember]
         public string userName;

@@ -11,7 +11,7 @@ namespace Server
     public interface IGame
     {
         [OperationContract]
-        string checkNumber(int[] number);
+        string checkNumber(int number);
 
         [OperationContract]
         void countGuessTimes();
@@ -29,11 +29,11 @@ namespace Server
     {
         //to let the other user know that the player has left the game
         [OperationContract]
-        void OngameInterupted(string message);
+        void OngameInterupted();
 
         //method for updating the score for the users
         [OperationContract]
-        void OnCountGuessTime();
+        void OnCountGuessTimes();
 
         [OperationContract]
         void OnWinner(Player p);

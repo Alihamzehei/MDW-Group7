@@ -78,6 +78,7 @@
             this.bt_login.TabIndex = 4;
             this.bt_login.Text = "Login";
             this.bt_login.UseVisualStyleBackColor = true;
+            this.bt_login.Click += new System.EventHandler(this.bt_login_Click);
             // 
             // bt_cancel
             // 
@@ -93,10 +94,10 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(13, 179);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(225, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(146, 13);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Please register first if you don\'t have username";
+            this.linkLabel1.Text = "Register for a FREE account!";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Login
