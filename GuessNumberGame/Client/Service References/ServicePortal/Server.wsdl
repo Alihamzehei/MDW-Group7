@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Server" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Server" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Server/Imports">
+      <xsd:import namespace="Server" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Server" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPortal_UserRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserRegister" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_UserRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_logIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:logIn" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_logIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:logInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_InvitePlayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:InvitePlayer" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_InvitePlayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InvitePlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_UserLogOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserLogOut" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_UserLogOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserLogOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_ChatMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChatMessage" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_ChatMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChatMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_OnInvitation_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnInvitation" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_OnInvitation_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnInvitationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_OnLoggingIn_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnLoggingIn" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_OnLoggingIn_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnLoggingInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_OnLoggingOut_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnLoggingOut" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_OnLoggingOut_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnLoggingOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_messageRecieved_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:messageRecieved" />
+  </wsdl:message>
+  <wsdl:message name="IPortal_messageRecieved_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:messageRecievedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPortal">
+    <wsdl:operation name="UserRegister">
+      <wsdl:input wsaw:Action="Server/IPortal/UserRegister" message="tns:IPortal_UserRegister_InputMessage" />
+      <wsdl:output wsaw:Action="Server/IPortal/UserRegisterResponse" message="tns:IPortal_UserRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="logIn">
+      <wsdl:input wsaw:Action="Server/IPortal/logIn" message="tns:IPortal_logIn_InputMessage" />
+      <wsdl:output wsaw:Action="Server/IPortal/logInResponse" message="tns:IPortal_logIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InvitePlayer">
+      <wsdl:input wsaw:Action="Server/IPortal/InvitePlayer" message="tns:IPortal_InvitePlayer_InputMessage" />
+      <wsdl:output wsaw:Action="Server/IPortal/InvitePlayerResponse" message="tns:IPortal_InvitePlayer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserLogOut">
+      <wsdl:input wsaw:Action="Server/IPortal/UserLogOut" message="tns:IPortal_UserLogOut_InputMessage" />
+      <wsdl:output wsaw:Action="Server/IPortal/UserLogOutResponse" message="tns:IPortal_UserLogOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChatMessage">
+      <wsdl:input wsaw:Action="Server/IPortal/ChatMessage" message="tns:IPortal_ChatMessage_InputMessage" />
+      <wsdl:output wsaw:Action="Server/IPortal/ChatMessageResponse" message="tns:IPortal_ChatMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnInvitation">
+      <wsdl:output wsaw:Action="Server/IPortal/OnInvitation" message="tns:IPortal_OnInvitation_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="Server/IPortal/OnInvitationResponse" message="tns:IPortal_OnInvitation_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnLoggingIn">
+      <wsdl:output wsaw:Action="Server/IPortal/OnLoggingIn" message="tns:IPortal_OnLoggingIn_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="Server/IPortal/OnLoggingInResponse" message="tns:IPortal_OnLoggingIn_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnLoggingOut">
+      <wsdl:output wsaw:Action="Server/IPortal/OnLoggingOut" message="tns:IPortal_OnLoggingOut_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="Server/IPortal/OnLoggingOutResponse" message="tns:IPortal_OnLoggingOut_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="messageRecieved">
+      <wsdl:output wsaw:Action="Server/IPortal/messageRecieved" message="tns:IPortal_messageRecieved_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="Server/IPortal/messageRecievedResponse" message="tns:IPortal_messageRecieved_InputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

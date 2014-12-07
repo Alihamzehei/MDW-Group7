@@ -80,7 +80,7 @@ namespace Server
         /// </summary>
         /// <param name="message">The sent message INCLUDING player's name.</param>
         [OperationContract]
-        void messageRecieved(string message);
+        void messageReceived(string message);
     }
 
 }

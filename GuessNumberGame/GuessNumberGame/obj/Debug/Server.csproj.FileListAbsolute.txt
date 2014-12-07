@@ -1,5 +1,4 @@
 C:\Users\Alex\Documents\GitHub\MDW-Group7\GuessNumberGame\GuessNumberGame\obj\Debug\Server.csprojResolveAssemblyReference.cache
-C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\GuessNumberGame\obj\Debug\Server.csprojResolveAssemblyReference.cache
 C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\GuessNumberGame\bin\Debug\GuessNumberGame.dll.config
 C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\GuessNumberGame\bin\Debug\GuessNumberGame.dll
 C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\GuessNumberGame\bin\Debug\GuessNumberGame.pdb

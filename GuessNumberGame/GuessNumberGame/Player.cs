@@ -27,5 +27,11 @@ namespace Server
         public IPortalCallBack PortalCallBack { get; set; }
 
         public IGameCallBack GameCallback { get; set; }
+
+        public Player(string un,string pw)
+        {
+            this.userName = un;
+            this.password = pw;
+        }
     }
 }

@@ -75,7 +75,7 @@ namespace Server
         /// <returns>A string with the player and the sent message.</returns>
         public void ChatMessage(Player player, string message)
         {
-            player.PortalCallBack.messageRecieved(player.userName + ": " + message);
+            player.PortalCallBack.messageReceived(player.userName + ": " + message);
         }
 
 
