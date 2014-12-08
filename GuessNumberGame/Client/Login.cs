@@ -31,7 +31,9 @@ namespace Client
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            this.Visible = false;
+            Register register = new Register();
+            register.Show();
             
 
         }
@@ -73,6 +75,13 @@ namespace Client
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void bt_cancel_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Register register = new Register();
+            register.Show();
         }
         /*IPortalCallback implementation end*/
     }
