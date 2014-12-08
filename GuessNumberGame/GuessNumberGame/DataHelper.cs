@@ -19,9 +19,9 @@ namespace Server
             connection = new OleDbConnection(connectionInfo);
         }
 
-        public bool IsExistingUser(String username)
+        public bool IsExistingUser(string username)
         {
-            String sql = "SELECT username From User" + username + "';";
+            String sql = "SELECT username From User '" + username + "';";
             OleDbCommand command = new OleDbCommand(sql, connection);
 
             connection.Open();
@@ -52,7 +52,7 @@ namespace Server
 
         public bool IsValidLogin(string userName, string password)
         {
-            String sql = "SELECT * FROM User WHERE username = '" + userName + "' AND password = '" + password + "';";
+            String sql = "SELECT * FROM User WHERE username = '" + userName + "' AND password = '" + password + "'";
             OleDbCommand command = new OleDbCommand(sql, connection);
             command.CommandType = CommandType.Text;
             command.CommandText = sql;
@@ -66,12 +66,12 @@ namespace Server
                 pName = Convert.ToString(reader["username"]);
                 pw = Convert.ToString(reader["password"]);
             }
-            if (pName==null||pw==null)
+            if (pName == null || pw == null)
             {
                 connection.Close();
                 return false;
             }
-            else 
+            else
             {
                 connection.Close();
                 return true;
