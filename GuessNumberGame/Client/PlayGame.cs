@@ -16,5 +16,10 @@ namespace Client
         {
             InitializeComponent();
         }
+
+        private void PlayGame_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
