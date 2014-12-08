@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.ServiceModel;
 using Client.ServicePortal;
+using Server;
 
 namespace Client
 {
@@ -30,11 +31,13 @@ namespace Client
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Close();
+            
 
         }
 
         private void bt_login_Click(object sender, EventArgs e)
-        {
+        {   
             Player temp = new Player();
             if (PortalProxy.logIn(temp))
             {

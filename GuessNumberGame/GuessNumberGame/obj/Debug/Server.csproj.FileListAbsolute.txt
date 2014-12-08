@@ -10,3 +10,9 @@ C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\GuessNumberGame\bin\Deb
 C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\GuessNumberGame\obj\Debug\Server.csprojResolveAssemblyReference.cache
 C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\GuessNumberGame\obj\Debug\GuessNumberGame.dll
 C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\GuessNumberGame\obj\Debug\GuessNumberGame.pdb
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\GuessNumberGame\bin\Debug\GuessNumberGame.dll.config
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\GuessNumberGame\bin\Debug\GuessNumberGame.dll
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\GuessNumberGame\bin\Debug\GuessNumberGame.pdb
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\GuessNumberGame\obj\Debug\Server.csprojResolveAssemblyReference.cache
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\GuessNumberGame\obj\Debug\GuessNumberGame.dll
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\GuessNumberGame\obj\Debug\GuessNumberGame.pdb

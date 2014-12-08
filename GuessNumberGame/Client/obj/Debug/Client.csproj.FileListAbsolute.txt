@@ -18,3 +18,13 @@ C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client
 C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.pdb
 C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Lobby.resources
 C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.PlayGame.resources
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\bin\Debug\Client.exe.config
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.exe
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.pdb
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Lobby.resources
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Login.resources
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.PlayGame.resources
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Properties.Resources.resources
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Register.resources
+E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.csproj.GenerateResource.Cache
