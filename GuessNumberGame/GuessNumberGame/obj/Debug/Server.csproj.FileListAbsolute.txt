@@ -4,3 +4,9 @@ C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\GuessNumberGam
 C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\GuessNumberGame\bin\Debug\GuessNumberGame.pdb
 C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\GuessNumberGame\obj\Debug\GuessNumberGame.dll
 C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\GuessNumberGame\obj\Debug\GuessNumberGame.pdb
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\GuessNumberGame\bin\Debug\GuessNumberGame.dll.config
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\GuessNumberGame\bin\Debug\GuessNumberGame.dll
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\GuessNumberGame\bin\Debug\GuessNumberGame.pdb
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\GuessNumberGame\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\GuessNumberGame\obj\Debug\GuessNumberGame.dll
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\GuessNumberGame\obj\Debug\GuessNumberGame.pdb

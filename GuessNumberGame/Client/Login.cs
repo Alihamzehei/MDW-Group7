@@ -66,6 +66,11 @@ namespace Client
         {
             throw new NotImplementedException();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
         /*IPortalCallback implementation end*/
     }
 }

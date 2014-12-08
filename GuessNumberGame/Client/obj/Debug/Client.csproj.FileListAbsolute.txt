@@ -7,3 +7,12 @@ C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Deb
 C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.exe
 C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.pdb
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\Client\bin\Debug\Client.exe.config
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\Client\bin\Debug\Client.exe
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\Client\bin\Debug\Client.pdb
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Login.resources
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.exe
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.pdb
