@@ -105,6 +105,7 @@
             this.label_error_message.Size = new System.Drawing.Size(329, 12);
             this.label_error_message.TabIndex = 7;
             this.label_error_message.Text = "Username Exist!Please try again with another username!";
+            this.label_error_message.Visible = false;
             // 
             // Register
             // 

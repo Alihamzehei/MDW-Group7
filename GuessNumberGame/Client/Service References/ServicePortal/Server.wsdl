@@ -55,11 +55,11 @@
   <wsdl:message name="IPortal_OnLoggingOut_InputCallbackMessage">
     <wsdl:part name="parameters" element="tns:OnLoggingOutResponse" />
   </wsdl:message>
-  <wsdl:message name="IPortal_messageRecieved_OutputCallbackMessage">
-    <wsdl:part name="parameters" element="tns:messageRecieved" />
+  <wsdl:message name="IPortal_messageReceived_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:messageReceived" />
   </wsdl:message>
-  <wsdl:message name="IPortal_messageRecieved_InputCallbackMessage">
-    <wsdl:part name="parameters" element="tns:messageRecievedResponse" />
+  <wsdl:message name="IPortal_messageReceived_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:messageReceivedResponse" />
   </wsdl:message>
   <wsdl:portType name="IPortal">
     <wsdl:operation name="UserRegister">
@@ -94,9 +94,9 @@
       <wsdl:output wsaw:Action="Server/IPortal/OnLoggingOut" message="tns:IPortal_OnLoggingOut_OutputCallbackMessage" />
       <wsdl:input wsaw:Action="Server/IPortal/OnLoggingOutResponse" message="tns:IPortal_OnLoggingOut_InputCallbackMessage" />
     </wsdl:operation>
-    <wsdl:operation name="messageRecieved">
-      <wsdl:output wsaw:Action="Server/IPortal/messageRecieved" message="tns:IPortal_messageRecieved_OutputCallbackMessage" />
-      <wsdl:input wsaw:Action="Server/IPortal/messageRecievedResponse" message="tns:IPortal_messageRecieved_InputCallbackMessage" />
+    <wsdl:operation name="messageReceived">
+      <wsdl:output wsaw:Action="Server/IPortal/messageReceived" message="tns:IPortal_messageReceived_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="Server/IPortal/messageReceivedResponse" message="tns:IPortal_messageReceived_InputCallbackMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

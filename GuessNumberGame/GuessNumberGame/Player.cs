@@ -33,5 +33,6 @@ namespace Server
             this.userName = un;
             this.password = pw;
         }
+        public Player() { }
     }
 }

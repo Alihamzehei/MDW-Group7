@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.ServiceModel;
 using Client.ServicePortal;
+using Server;
 
 namespace Client
 {
@@ -30,11 +31,15 @@ namespace Client
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Visible = false;
+            Register register = new Register();
+            register.Show();
+            
 
         }
 
         private void bt_login_Click(object sender, EventArgs e)
-        {
+        {   
             Player temp = new Player();
             if (PortalProxy.logIn(temp))
             {
@@ -70,6 +75,13 @@ namespace Client
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void bt_cancel_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Register register = new Register();
+            register.Show();
         }
         /*IPortalCallback implementation end*/
     }
