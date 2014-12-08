@@ -83,6 +83,14 @@ namespace Client
             Register register = new Register();
             register.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            Register rf = new Register();
+            rf.Show();
+        }
         /*IPortalCallback implementation end*/
     }
 }

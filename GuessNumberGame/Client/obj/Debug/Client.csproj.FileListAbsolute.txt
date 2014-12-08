@@ -28,3 +28,4 @@ E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.PlayGame.
 E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Properties.Resources.resources
 E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Register.resources
 E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Register.resources
