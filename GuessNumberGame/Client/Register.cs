@@ -13,7 +13,7 @@ using Server;
 
 namespace Client
 {   
-    public partial class Register : Form,ServicePortal.IPortal
+    public partial class Register : Form//,ServicePortal.IPortal
     {
         private ServicePortal.IPortal proxy;
         public Register()

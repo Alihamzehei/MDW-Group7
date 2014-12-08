@@ -22,13 +22,11 @@ namespace Server
         /// </summary>
         /// <param name="p">The player of the game.</param>
         /// <returns>True for success, false for fail.</returns>
-        public bool UserRegister(string username,string password)
+        public bool UserRegister(Player p)
         {
-
-            if (dh.IsExistingUser(username)==null)
+            if (!dh.IsExistingUser(p.userName))
             {
-                //Player p = new Player(username, password);
-                dh.UserRegister(username, password);
+                dh.UserRegister(p.userName, p.password);
                 return true;
             }
             else

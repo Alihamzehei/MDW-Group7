@@ -14,7 +14,7 @@ namespace Server
         public DataHelper()
         {
             String provider = "Provider=Microsoft.ACE.OLEDB.12.0";
-            String databaseInfo = "Data Source=" + @"C:\Users\Joy\Documents\GitHub\MDW-Group7";
+            String databaseInfo = "Data Source=" + @"..\\..\\..\\..\\Database1.accdb";
             String connectionInfo = provider + ";" + databaseInfo;
             connection = new OleDbConnection(connectionInfo);
         }
@@ -52,20 +52,30 @@ namespace Server
 
         public bool IsValidLogin(string userName, string password)
         {
-            String sql = "SELECT username, password FROM User WHERE playerName = '" + userName + "' AND " + "password = '" + password + "';";
+            String sql = "SELECT * FROM User WHERE username = '" + userName + "' AND password = '" + password + "';";
             OleDbCommand command = new OleDbCommand(sql, connection);
+            command.CommandType = CommandType.Text;
+            command.CommandText = sql;
 
-           
-                connection.Open();
-                OleDbDataReader reader = command.ExecuteReader();
-                int count = 0;
-                while (reader.Read())
-                {
-                    count++;
-                }
-                if (count >= 1)
-                {  return true;}else{return false;}
-
+            connection.Open();
+            OleDbDataReader reader = command.ExecuteReader();
+            string pName = null;
+            string pw = null;
+            while (reader.Read())
+            {
+                pName = Convert.ToString(reader["username"]);
+                pw = Convert.ToString(reader["password"]);
+            }
+            if (pName==null||pw==null)
+            {
+                connection.Close();
+                return false;
+            }
+            else 
+            {
+                connection.Close();
+                return true;
+            }
         }
     }
 }

@@ -34,13 +34,11 @@ namespace Client
             this.Visible = false;
             Register register = new Register();
             register.Show();
-            
-
         }
 
         private void bt_login_Click(object sender, EventArgs e)
-        {   
-            Player temp = new Player();
+        {
+            Player temp = new Player(this.tb_username.Text, this.tb_password.Text);
             if (PortalProxy.logIn(temp))
             {
                 MessageBox.Show("Log in Successful!");
@@ -49,6 +47,20 @@ namespace Client
             {
                 MessageBox.Show("Log in failed.");
             }
+        }
+
+        private void bt_cancel_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Register register = new Register();
+            register.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Register rf = new Register();
+            rf.Show();
         }
 
         /*IPortalCallback implementation start*/
@@ -67,29 +79,9 @@ namespace Client
             throw new NotImplementedException();
         }
 
-        public void messageRecieved(string m)
+        public void messageReceived(string m)
         {
             throw new NotImplementedException();
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bt_cancel_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            Register register = new Register();
-            register.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-            Register rf = new Register();
-            rf.Show();
         }
         /*IPortalCallback implementation end*/
     }

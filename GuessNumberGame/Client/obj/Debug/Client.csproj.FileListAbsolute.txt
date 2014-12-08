@@ -29,3 +29,8 @@ E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Propertie
 E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Register.resources
 E:\ICT 4th year\MDW\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 C:\Users\Joy\Documents\GitHub\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Register.resources
+C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Lobby.resources
+C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.PlayGame.resources
+C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Register.resources
+C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\bin\Debug\GuessNumberGame.dll
+C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\bin\Debug\GuessNumberGame.pdb
