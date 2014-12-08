@@ -16,7 +16,7 @@ namespace Server
         /// <param name="p">The player of the game.</param>
         /// <returns>True for success, false for fail.</returns>
         [OperationContract]
-        bool UserRegister(string username,string password);
+        bool UserRegister(Player player);
 
         /// <summary>
         /// It is used to log in a player.

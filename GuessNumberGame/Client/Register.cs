@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.ServiceModel;
-
+using Server;
 
 
 namespace Client
@@ -34,10 +34,10 @@ namespace Client
             String passWord = this.tb_password.ToString();
             String repassWord = this.tb_repassword.ToString();
             if (passWord == repassWord)
-            {
-                
+            {   
+                Player player = new Player(userName,passWord);
                 this.label_error_message.Visible = false;
-                proxy.UserRegister(userName,passWord);
+                proxy.UserRegister(player);
             }
             else {
                 this.label_error_message.Visible = true;
