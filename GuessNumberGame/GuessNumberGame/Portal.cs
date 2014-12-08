@@ -22,12 +22,13 @@ namespace Server
         /// </summary>
         /// <param name="p">The player of the game.</param>
         /// <returns>True for success, false for fail.</returns>
-        public bool UserRegister(Player player)
+        public bool UserRegister(string username,string password)
         {
-            if (dh.UserRegister(player.userName, player.password))
+
+            if (dh.IsExistingUser(username)==null)
             {
-                OnlinePlayers.Add(player);
-                player.PortalCallBack.OnLoggingIn(player);
+                //Player p = new Player(username, password);
+                dh.UserRegister(username, password);
                 return true;
             }
             else
