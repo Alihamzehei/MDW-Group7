@@ -53,6 +53,7 @@
     <Compile Include="DataHelper.cs" />
     <Compile Include="IGame.cs" />
     <Compile Include="IPortal.cs" />
+    <Compile Include="Match.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Portal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,6 +68,7 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ClassDiagramServer.cd" />
     <None Include="Database1DataSet.xsc">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </None>
