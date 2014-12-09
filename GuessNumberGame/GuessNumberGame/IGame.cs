@@ -11,16 +11,13 @@ namespace Server
     public interface IGame
     {
         [OperationContract]
-        string checkNumber(int number);
+        string CheckNumber(int[] number,Player p);
 
         [OperationContract]
-        void countGuessTimes();
+        void QuitGame(Player player);
 
         [OperationContract]
-        void quitGame(Player player);
-
-        [OperationContract]
-        void winner(Player p);
+        void Winner(Player p);
 
         // TODO: Add your service operations here
     }

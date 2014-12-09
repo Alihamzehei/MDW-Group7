@@ -34,3 +34,17 @@ C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Deb
 C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Register.resources
 C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\bin\Debug\GuessNumberGame.dll
 C:\Users\Ominus Rumors\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\bin\Debug\GuessNumberGame.pdb
+C:\Users\George II\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\bin\Debug\Client.exe.config
+C:\Users\George II\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\bin\Debug\Client.exe
+C:\Users\George II\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\bin\Debug\Client.pdb
+C:\Users\George II\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\bin\Debug\GuessNumberGame.dll
+C:\Users\George II\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\bin\Debug\GuessNumberGame.pdb
+C:\Users\George II\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\George II\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Lobby.resources
+C:\Users\George II\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Login.resources
+C:\Users\George II\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.PlayGame.resources
+C:\Users\George II\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\George II\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.Register.resources
+C:\Users\George II\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\George II\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.exe
+C:\Users\George II\OneDrive\Fontys\MDW-Group7\GuessNumberGame\Client\obj\Debug\Client.pdb

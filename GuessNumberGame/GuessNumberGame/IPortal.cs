@@ -24,7 +24,7 @@ namespace Server
         /// <param name="p">The player of the game.</param>
         /// <returns>True for success, false for fail.</returns>
         [OperationContract]
-        bool logIn(Player p);
+        bool LogIn(Player p);
 
         /// <summary>
         /// Invites the player for a game.
@@ -80,7 +80,7 @@ namespace Server
         /// </summary>
         /// <param name="message">The sent message INCLUDING player's name.</param>
         [OperationContract]
-        void messageReceived(string message);
+        void OnMessage(string message);
     }
 
 }

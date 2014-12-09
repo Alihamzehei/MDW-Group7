@@ -10,49 +10,92 @@ namespace Server
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class Game : IGame
     {
-        Random guessNumber;
-        int guessTimes;
+        private Player player1;
+        private Player player2;
+        private int[] arr_winNumber;
 
-        public Game()
+        public Game(Player p1, Player p2)
         {
-            guessNumber = new Random();
-            guessNumber.Next(0, 9999);
+            this.player1 = p1;
+            this.player2 = p2;
+            this.arr_winNumber = new int[4];
+            for (int i = 0; i <= 3; i++)
+            {
+                Random rnd = new Random();
+                arr_winNumber[i] = rnd.Next(0, 9);
+            }
         }
 
-        public void countGuessTimes()
+        public Player Player1 
         {
-            guessTimes++;
+            get { return player1; }
         }
 
-        //TODO
-        public string checkNumber(int playersGuess)
+        public Player Player2 
         {
-            countGuessTimes();
+            get { return player2; }
+        }
+
+        public Player Player
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public string CheckNumber(int[] playersGuess, Player player)
+        {
             int A = 0;
             int B = 0;
 
-            var digits = new List<int>();
-
+            //we can get rid of the following if we pass directly playersGuess as int[]
             //don't know yet what this piece of code does
             //source: http://stackoverflow.com/questions/4580261/integer-to-integer-array-c-sharp
-            for (; playersGuess != 0; playersGuess /= 10)
+            //var digits = new List<int>();
+            //for (; playersGuess != 0; playersGuess /= 10)
+            //{
+            //    digits.Add(playersGuess % 10);
+            //}
+            //var arr_playersGuess = digits.ToArray();
+            //Array.Reverse(arr_playersGuess);
+
+            for (int i = 0; i <= 3; i++)    //"i" picks cells from arr_playersGuess
             {
-                digits.Add(playersGuess % 10);
+                if (playersGuess[i] == arr_winNumber[i])
+                {
+                    A++;
+                    if (A == 4)
+                    {
+                        player1.GameCallback.OnWinner(player);
+                        player2.GameCallback.OnWinner(player);
+                        return "Player " + player.userName + "wins the game!";
+                    }
+                }
+                for (int j = 0; j <= 3; j++)    //"j" picks cells from arr_winNumber
+                {
+                    if (i == j)
+                        break;
+
+                    if (playersGuess[i] == playersGuess[j])
+                    {
+                        B++;
+                    }
+                }
             }
 
-            var arr = digits.ToArray();
-            Array.Reverse(arr);
-
-            //TODO
-            throw new NotImplementedException();
+            return A.ToString() + " numbers correct \n" + B.ToString() + "numbers in wrong place";
         }
 
-        public void quitGame(Player p)
+        public void QuitGame(Player p)
         {
             throw new NotImplementedException();
         }
 
-        public void winner(Player p)
+        public void Winner(Player p)
         {
             throw new NotImplementedException();
         }

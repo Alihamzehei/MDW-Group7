@@ -17,6 +17,28 @@ namespace Server
             dh = new DataHelper();
         }
 
+        internal DataHelper DataHelper
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Player Player
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         /// <summary>
         /// It is used to register a player to DB.
         /// </summary>
@@ -40,7 +62,7 @@ namespace Server
         /// </summary>
         /// <param name="p">The player of the game.</param>
         /// <returns>True for success, false for fail.</returns>
-        public bool logIn(Player player)
+        public bool LogIn(Player player)
         {
             return dh.IsValidLogin(player.userName, player.password);
         }
@@ -74,7 +96,7 @@ namespace Server
         /// <returns>A string with the player and the sent message.</returns>
         public void ChatMessage(Player player, string message)
         {
-            player.PortalCallBack.messageReceived(player.userName + ": " + message);
+            player.PortalCallBack.OnMessage(player.userName + ": " + message);
         }
 
 

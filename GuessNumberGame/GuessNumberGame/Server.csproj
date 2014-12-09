@@ -53,7 +53,6 @@
     <Compile Include="DataHelper.cs" />
     <Compile Include="IGame.cs" />
     <Compile Include="IPortal.cs" />
-    <Compile Include="Match.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Portal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
