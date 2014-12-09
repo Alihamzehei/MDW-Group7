@@ -9,21 +9,10 @@
   </Class>
   <Class Name="Server.Game" BaseTypeListCollapsed="true">
     <Position X="6.5" Y="3.25" Width="1.5" />
-    <AssociationLine Name="Player" Type="Server.Player" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="6.625" Y="6.411" />
-        <Point X="6.625" Y="7.393" />
-        <Point X="6.438" Y="7.393" />
-        <Point X="6.438" Y="8" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>wAAAAAAAAAAAAAAAwACAAIAAAAAAAAAAAEAAAQAAAAQ=</HashCode>
+      <HashCode>wAAAAAAAAAAAAAAAwACAAIAAAAAAAAAAAEAAAAAAAAQ=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Player" />
-    </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Server.Player">

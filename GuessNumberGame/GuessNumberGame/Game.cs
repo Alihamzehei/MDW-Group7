@@ -29,22 +29,13 @@ namespace Server
         public Player Player1 
         {
             get { return player1; }
+            set { player1 = value; }
         }
 
         public Player Player2 
         {
             get { return player2; }
-        }
-
-        public Player Player
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            set { player2 = value; }
         }
 
         public string CheckNumber(int[] playersGuess, Player player)
@@ -90,14 +81,16 @@ namespace Server
             return A.ToString() + " numbers correct \n" + B.ToString() + "numbers in wrong place";
         }
 
-        public void QuitGame(Player p)
+        public void QuitGame(Player player)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Winner(Player p)
-        {
-            throw new NotImplementedException();
+            if (player == player1)
+            {
+                player2.GameCallback.OnGameInterupted();
+            }
+            else if (player == player2)
+            {
+                player1.GameCallback.OnGameInterupted();
+            }
         }
     }
 }
