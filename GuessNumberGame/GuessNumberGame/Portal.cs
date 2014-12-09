@@ -8,8 +8,8 @@ namespace Server
 {
     class Portal : IPortal
     {
-        List<Player> OnlinePlayers;
-        DataHelper dh;
+        private List<Player> OnlinePlayers;
+        private DataHelper dh;
 
         public Portal()
         {
@@ -17,38 +17,16 @@ namespace Server
             dh = new DataHelper();
         }
 
-        internal DataHelper DataHelper
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public Player Player
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
         /// <summary>
         /// It is used to register a player to DB.
         /// </summary>
-        /// <param name="p">The player of the game.</param>
+        /// <param name="player">The player of the game.</param>
         /// <returns>True for success, false for fail.</returns>
-        public bool UserRegister(Player p)
+        public bool UserRegister(Player player)
         {
-            if (!dh.IsExistingUser(p.userName))
+            if (!dh.IsExistingUser(player.userName))
             {
-                dh.UserRegister(p.userName, p.password);
+                dh.UserRegister(player.userName, player.password);
                 return true;
             }
             else
@@ -98,7 +76,5 @@ namespace Server
         {
             player.PortalCallBack.OnMessage(player.userName + ": " + message);
         }
-
-
     }
 }

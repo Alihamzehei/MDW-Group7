@@ -24,7 +24,7 @@ namespace Server
         /// <param name="p">The player of the game.</param>
         /// <returns>True for success, false for fail.</returns>
         [OperationContract]
-        bool LogIn(Player p);
+        bool LogIn(Player player);
 
         /// <summary>
         /// Invites the player for a game.
@@ -33,14 +33,14 @@ namespace Server
         /// <param name="receive">The receiver of invitation.</param>
         /// <returns>True for acceptance, false for dismissal.</returns>
         [OperationContract]
-        bool InvitePlayer(Player send, Player receive);
+        bool InvitePlayer(Player sender, Player receiver);
 
         /// <summary>
         /// It is used when a player logges out.
         /// </summary>
         /// <param name="p">The player of the game.</param>
         [OperationContract]
-        void UserLogOut(Player p);
+        void UserLogOut(Player player);
 
         /// <summary>
         /// Receives player's message.
@@ -48,7 +48,7 @@ namespace Server
         /// <param name="p">The player of the game.</param>
         /// <param name="m">The message sent.</param>
         [OperationContract]
-        void ChatMessage(Player p, string m);
+        void ChatMessage(Player player, string message);
     }
 
     public interface IPortalCallBack
@@ -73,7 +73,7 @@ namespace Server
         /// </summary>
         /// <param name="p">The leaving player.</param>
         [OperationContract]
-        void OnLoggingOut(Player p);
+        void OnLoggingOut(Player player);
 
         /// <summary>
         /// It is called when a player sends a message on chat.
