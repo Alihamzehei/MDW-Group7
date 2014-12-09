@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csp
 		{15B3E0D2-6217-493A-A690-158C497F5318} = {15B3E0D2-6217-493A-A690-158C497F5318}
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{483D8AEA-CD88-4C3E-A3EC-2E3CF5D30C88}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sequence Diagrams", "Sequence Diagrams", "{483D8AEA-CD88-4C3E-A3EC-2E3CF5D30C88}"
 	ProjectSection(SolutionItems) = preProject
 		SequenceDiagram_LogIn.sequencediagram = SequenceDiagram_LogIn.sequencediagram
 		SequenceDiagram_Register.sequencediagram = SequenceDiagram_Register.sequencediagram

@@ -9,143 +9,33 @@
 //------------------------------------------------------------------------------
 
 namespace Client.ServiceGame {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Player", Namespace="http://schemas.datacontract.org/2004/07/Server")]
-    [System.SerializableAttribute()]
-    public partial class Player : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool loggedInField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Client.ServiceGame.Player opponentField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string passwordField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string userNameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool loggedIn {
-            get {
-                return this.loggedInField;
-            }
-            set {
-                if ((this.loggedInField.Equals(value) != true)) {
-                    this.loggedInField = value;
-                    this.RaisePropertyChanged("loggedIn");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Client.ServiceGame.Player opponent {
-            get {
-                return this.opponentField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.opponentField, value) != true)) {
-                    this.opponentField = value;
-                    this.RaisePropertyChanged("opponent");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string password {
-            get {
-                return this.passwordField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.passwordField, value) != true)) {
-                    this.passwordField = value;
-                    this.RaisePropertyChanged("password");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string userName {
-            get {
-                return this.userNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.userNameField, value) != true)) {
-                    this.userNameField = value;
-                    this.RaisePropertyChanged("userName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="Server", ConfigurationName="ServiceGame.IGame", CallbackContract=typeof(Client.ServiceGame.IGameCallback))]
     public interface IGame {
         
-        [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/checkNumber", ReplyAction="Server/IGame/checkNumberResponse")]
-        string checkNumber(int number);
+        [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/CheckNumber", ReplyAction="Server/IGame/CheckNumberResponse")]
+        string CheckNumber(int[] number, Server.Player player);
         
-        [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/checkNumber", ReplyAction="Server/IGame/checkNumberResponse")]
-        System.Threading.Tasks.Task<string> checkNumberAsync(int number);
+        [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/CheckNumber", ReplyAction="Server/IGame/CheckNumberResponse")]
+        System.Threading.Tasks.Task<string> CheckNumberAsync(int[] number, Server.Player player);
         
-        [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/countGuessTimes", ReplyAction="Server/IGame/countGuessTimesResponse")]
-        void countGuessTimes();
+        [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/QuitGame", ReplyAction="Server/IGame/QuitGameResponse")]
+        void QuitGame(Server.Player player);
         
-        [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/countGuessTimes", ReplyAction="Server/IGame/countGuessTimesResponse")]
-        System.Threading.Tasks.Task countGuessTimesAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/quitGame", ReplyAction="Server/IGame/quitGameResponse")]
-        void quitGame(Client.ServiceGame.Player player);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/quitGame", ReplyAction="Server/IGame/quitGameResponse")]
-        System.Threading.Tasks.Task quitGameAsync(Client.ServiceGame.Player player);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/winner", ReplyAction="Server/IGame/winnerResponse")]
-        void winner(Client.ServiceGame.Player p);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/winner", ReplyAction="Server/IGame/winnerResponse")]
-        System.Threading.Tasks.Task winnerAsync(Client.ServiceGame.Player p);
+        [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/QuitGame", ReplyAction="Server/IGame/QuitGameResponse")]
+        System.Threading.Tasks.Task QuitGameAsync(Server.Player player);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IGameCallback {
         
-        [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/OngameInterupted", ReplyAction="Server/IGame/OngameInteruptedResponse")]
-        void OngameInterupted();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/OnCountGuessTimes", ReplyAction="Server/IGame/OnCountGuessTimesResponse")]
-        void OnCountGuessTimes();
+        [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/OnGameInterupted", ReplyAction="Server/IGame/OnGameInteruptedResponse")]
+        void OnGameInterupted(Server.Player player);
         
         [System.ServiceModel.OperationContractAttribute(Action="Server/IGame/OnWinner", ReplyAction="Server/IGame/OnWinnerResponse")]
-        void OnWinner(Client.ServiceGame.Player p);
+        void OnWinner(Server.Player player);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -176,36 +66,20 @@ namespace Client.ServiceGame {
                 base(callbackInstance, binding, remoteAddress) {
         }
         
-        public string checkNumber(int number) {
-            return base.Channel.checkNumber(number);
+        public string CheckNumber(int[] number, Server.Player player) {
+            return base.Channel.CheckNumber(number, player);
         }
         
-        public System.Threading.Tasks.Task<string> checkNumberAsync(int number) {
-            return base.Channel.checkNumberAsync(number);
+        public System.Threading.Tasks.Task<string> CheckNumberAsync(int[] number, Server.Player player) {
+            return base.Channel.CheckNumberAsync(number, player);
         }
         
-        public void countGuessTimes() {
-            base.Channel.countGuessTimes();
+        public void QuitGame(Server.Player player) {
+            base.Channel.QuitGame(player);
         }
         
-        public System.Threading.Tasks.Task countGuessTimesAsync() {
-            return base.Channel.countGuessTimesAsync();
-        }
-        
-        public void quitGame(Client.ServiceGame.Player player) {
-            base.Channel.quitGame(player);
-        }
-        
-        public System.Threading.Tasks.Task quitGameAsync(Client.ServiceGame.Player player) {
-            return base.Channel.quitGameAsync(player);
-        }
-        
-        public void winner(Client.ServiceGame.Player p) {
-            base.Channel.winner(p);
-        }
-        
-        public System.Threading.Tasks.Task winnerAsync(Client.ServiceGame.Player p) {
-            return base.Channel.winnerAsync(p);
+        public System.Threading.Tasks.Task QuitGameAsync(Server.Player player) {
+            return base.Channel.QuitGameAsync(player);
         }
     }
 }

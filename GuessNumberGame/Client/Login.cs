@@ -15,7 +15,7 @@ namespace Client
 {
     public partial class Login : Form, Client.ServicePortal.IPortalCallback
     {
-        public Client.ServicePortal.PortalClient PortalProxy;
+        private Client.ServicePortal.PortalClient PortalProxy;
 
         public Login()
         {
@@ -38,7 +38,8 @@ namespace Client
 
         private void bt_login_Click(object sender, EventArgs e)
         {
-            Player temp = new Player(this.tb_username.Text, this.tb_password.Text);
+            IPortalCallBack portalCallback = OperationContext.Current.GetCallbackChannel<IPortalCallBack>();
+            Player temp = new Player(this.tb_username.Text, this.tb_password.Text, portalCallback);
             if (PortalProxy.logIn(temp))
             {
                 MessageBox.Show("Log in Successful!");

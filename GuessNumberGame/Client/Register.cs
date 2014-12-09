@@ -12,18 +12,46 @@ using Server;
 
 
 namespace Client
-{   
-    public partial class Register : Form//,ServicePortal.IPortal
+{
+    public partial class Register : Form, ServicePortal.IPortalCallback
     {
         private ServicePortal.IPortal proxy;
+        private IPortalCallBack portalCallback;
+        
         public Register()
         {
             InitializeComponent();
             InstanceContext context = new InstanceContext(this);
             proxy = new ServicePortal.PortalClient(context);
+            portalCallback = OperationContext.Current.GetCallbackChannel<IPortalCallBack>();
         }
 
-        private void Register_Load(object sender, EventArgs e)
+        public void messageReceived(string m)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool OnInvitation(Player p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnLoggingIn(Player p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnLoggingOut(Player p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnMessage(string m)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Register_Load(object sender, EventArgs e)
         {
 
         }
@@ -34,15 +62,15 @@ namespace Client
             String passWord = this.tb_password.ToString();
             String repassWord = this.tb_repassword.ToString();
             if (passWord == repassWord)
-            {   
-                Player player = new Player(userName,passWord);
+            {
+                Player player = new Player(userName, passWord, portalCallback);
                 this.label_error_message.Visible = false;
                 proxy.UserRegister(player);
             }
-            else {
+            else
+            {
                 this.label_error_message.Visible = true;
             }
-            
         }
     }
 }

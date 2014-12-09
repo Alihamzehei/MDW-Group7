@@ -14,6 +14,9 @@ namespace Server
         private Player player2;
         private int[] arr_winNumber;
 
+        public Game()
+        { }
+
         public Game(Player p1, Player p2)
         {
             this.player1 = p1;
@@ -26,13 +29,13 @@ namespace Server
             }
         }
 
-        public Player Player1 
+        public Player Player1
         {
             get { return player1; }
             set { player1 = value; }
         }
 
-        public Player Player2 
+        public Player Player2
         {
             get { return player2; }
             set { player2 = value; }
@@ -63,7 +66,7 @@ namespace Server
                     {
                         player1.GameCallback.OnWinner(player);
                         player2.GameCallback.OnWinner(player);
-                        return "Player " + player.userName + "wins the game!";
+                        return "Player " + player.Username + "wins the game!";
                     }
                 }
                 for (int j = 0; j <= 3; j++)    //"j" picks cells from arr_winNumber
@@ -83,14 +86,8 @@ namespace Server
 
         public void QuitGame(Player player)
         {
-            if (player == player1)
-            {
-                player2.GameCallback.OnGameInterupted();
-            }
-            else if (player == player2)
-            {
-                player1.GameCallback.OnGameInterupted();
-            }
+            player2.GameCallback.OnGameInterupted(player);
+            player1.GameCallback.OnGameInterupted(player);
         }
     }
 }

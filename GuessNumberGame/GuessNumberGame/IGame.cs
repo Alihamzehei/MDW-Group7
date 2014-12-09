@@ -19,13 +19,8 @@ namespace Server
 
     public interface IGameCallBack
     {
-        //to let the other user know that the player has left the game
         [OperationContract]
-        void OnGameInterupted();
-
-        //method for updating the score for the users
-        [OperationContract]
-        void OnCountGuessTimes();
+        void OnGameInterupted(Player player);
 
         [OperationContract]
         void OnWinner(Player player);

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.ServiceModel;
 
 namespace Server
 {
@@ -10,6 +12,7 @@ namespace Server
     {
         private List<Player> OnlinePlayers;
         private DataHelper dh;
+        private Game game;
 
         public Portal()
         {
@@ -24,9 +27,9 @@ namespace Server
         /// <returns>True for success, false for fail.</returns>
         public bool UserRegister(Player player)
         {
-            if (!dh.IsExistingUser(player.userName))
+            if (!dh.IsExistingUser(player.Username))
             {
-                dh.UserRegister(player.userName, player.password);
+                dh.UserRegister(player.Username, player.Password);
                 return true;
             }
             else
@@ -42,7 +45,7 @@ namespace Server
         /// <returns>True for success, false for fail.</returns>
         public bool LogIn(Player player)
         {
-            return dh.IsValidLogin(player.userName, player.password);
+            return dh.IsValidLogin(player.Username, player.Password);
         }
 
         /// <summary>
@@ -53,7 +56,15 @@ namespace Server
         /// <returns>True for acceptance, false for dismissal.</returns>
         public bool InvitePlayer(Player sender, Player receiver)
         {
-            return receiver.PortalCallBack.OnInvitation(sender);
+            if (receiver.PortalCallback.OnInvitation(sender))
+            {
+                game = new Game(sender, receiver);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>
@@ -62,7 +73,7 @@ namespace Server
         /// <param name="p">The player of the game.</param>
         public void UserLogOut(Player player)
         {
-            player.PortalCallBack.OnLoggingOut(player);
+            player.PortalCallback.OnLoggingOut(player);
             OnlinePlayers.Remove(player);
         }
 
@@ -74,7 +85,7 @@ namespace Server
         /// <returns>A string with the player and the sent message.</returns>
         public void ChatMessage(Player player, string message)
         {
-            player.PortalCallBack.OnMessage(player.userName + ": " + message);
+            player.PortalCallback.OnMessage(player.Username + ": " + message);
         }
     }
 }

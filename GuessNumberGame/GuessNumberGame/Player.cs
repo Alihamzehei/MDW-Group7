@@ -12,27 +12,41 @@ namespace Server
     public class Player
     {
         [DataMember]
-        public string userName;
+        private string username;
 
         [DataMember]
-        public string password;
+        private string password;
 
-        [DataMember]
-        public bool loggedIn;
+        private IPortalCallBack portalCallBack;
 
-        [DataMember]
-        public Player opponent;
+        private IGameCallBack gameCallback;
 
-        //players have a callback, so we can callback methods for them
-        public IPortalCallBack PortalCallBack { get; set; }
-
-        public IGameCallBack GameCallback { get; set; }
-
-        public Player(string un,string pw)
+        public string Username 
         {
-            this.userName = un;
-            this.password = pw;
+            get { return username; }
         }
-        public Player() { }
+
+        public string Password
+        {
+            get { return password; }
+        }
+
+        public IPortalCallBack PortalCallback
+        {
+            get { return portalCallBack; }
+        }
+
+        public IGameCallBack GameCallback
+        {
+            set { gameCallback = value; }
+            get { return gameCallback; }
+        }
+
+        public Player(string un,string pw, IPortalCallBack ptrlcb)
+        {
+            this.username = un;
+            this.password = pw;
+            this.portalCallBack = ptrlcb;
+        }
     }
 }

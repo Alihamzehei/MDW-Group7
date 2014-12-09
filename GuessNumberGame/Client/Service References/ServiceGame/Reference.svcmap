@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a9fea971-03ba-4d0b-8f0c-6684fa94ec36" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a796a11a-449f-41e2-8f42-f6adea5c3f21" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,12 @@
     <MetadataSource Address="http://localhost:8734/Design_Time_Addresses/GuessNumberGame/Game/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Server.wsdl" MetadataType="Wsdl" ID="329c3a4a-744e-4a24-97d7-c17ab4c9fca9" SourceId="1" SourceUrl="http://localhost:8734/Design_Time_Addresses/GuessNumberGame/Game/mex" />
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="9513251d-7161-4090-87a6-bde74a46e412" SourceId="1" SourceUrl="http://localhost:8734/Design_Time_Addresses/GuessNumberGame/Game/mex" />
-    <MetadataFile FileName="Server.xsd" MetadataType="Schema" ID="810ecdd4-725b-4126-96c6-be8358e8f362" SourceId="1" SourceUrl="http://localhost:8734/Design_Time_Addresses/GuessNumberGame/Game/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="e7ad26a7-d74e-4640-b50c-ec97a58c823a" SourceId="1" SourceUrl="http://localhost:8734/Design_Time_Addresses/GuessNumberGame/Game/mex" />
-    <MetadataFile FileName="Server1.xsd" MetadataType="Schema" ID="087ec75c-ce66-4dd8-9ec1-6623e6b0e809" SourceId="1" SourceUrl="http://localhost:8734/Design_Time_Addresses/GuessNumberGame/Game/mex" />
+    <MetadataFile FileName="Server.wsdl" MetadataType="Wsdl" ID="7cc758c3-8176-421b-9e45-9faf6a1a99df" SourceId="1" SourceUrl="http://localhost:8734/Design_Time_Addresses/GuessNumberGame/Game/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="888c4251-3e33-4261-ba3b-8f62cbf76caa" SourceId="1" SourceUrl="http://localhost:8734/Design_Time_Addresses/GuessNumberGame/Game/mex" />
+    <MetadataFile FileName="Server.xsd" MetadataType="Schema" ID="ce1cf624-057a-4a89-a4e7-a1afac1ecd65" SourceId="1" SourceUrl="http://localhost:8734/Design_Time_Addresses/GuessNumberGame/Game/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="5507b495-a13b-4a4a-9369-5b7ad703d761" SourceId="1" SourceUrl="http://localhost:8734/Design_Time_Addresses/GuessNumberGame/Game/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="667deff7-6953-438c-8cb0-8de57c8c4b98" SourceId="1" SourceUrl="http://localhost:8734/Design_Time_Addresses/GuessNumberGame/Game/mex" />
+    <MetadataFile FileName="Server1.xsd" MetadataType="Schema" ID="efe57b3d-80c4-4bf8-b9df-1a89e66accf8" SourceId="1" SourceUrl="http://localhost:8734/Design_Time_Addresses/GuessNumberGame/Game/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -4,44 +4,27 @@
     <xsd:schema targetNamespace="Server/Imports">
       <xsd:import namespace="Server" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/Server" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IGame_checkNumber_InputMessage">
-    <wsdl:part name="parameters" element="tns:checkNumber" />
+  <wsdl:message name="IGame_CheckNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckNumber" />
   </wsdl:message>
-  <wsdl:message name="IGame_checkNumber_OutputMessage">
-    <wsdl:part name="parameters" element="tns:checkNumberResponse" />
+  <wsdl:message name="IGame_CheckNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckNumberResponse" />
   </wsdl:message>
-  <wsdl:message name="IGame_countGuessTimes_InputMessage">
-    <wsdl:part name="parameters" element="tns:countGuessTimes" />
+  <wsdl:message name="IGame_QuitGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuitGame" />
   </wsdl:message>
-  <wsdl:message name="IGame_countGuessTimes_OutputMessage">
-    <wsdl:part name="parameters" element="tns:countGuessTimesResponse" />
+  <wsdl:message name="IGame_QuitGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuitGameResponse" />
   </wsdl:message>
-  <wsdl:message name="IGame_quitGame_InputMessage">
-    <wsdl:part name="parameters" element="tns:quitGame" />
+  <wsdl:message name="IGame_OnGameInterupted_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnGameInterupted" />
   </wsdl:message>
-  <wsdl:message name="IGame_quitGame_OutputMessage">
-    <wsdl:part name="parameters" element="tns:quitGameResponse" />
-  </wsdl:message>
-  <wsdl:message name="IGame_winner_InputMessage">
-    <wsdl:part name="parameters" element="tns:winner" />
-  </wsdl:message>
-  <wsdl:message name="IGame_winner_OutputMessage">
-    <wsdl:part name="parameters" element="tns:winnerResponse" />
-  </wsdl:message>
-  <wsdl:message name="IGame_OngameInterupted_OutputCallbackMessage">
-    <wsdl:part name="parameters" element="tns:OngameInterupted" />
-  </wsdl:message>
-  <wsdl:message name="IGame_OngameInterupted_InputCallbackMessage">
-    <wsdl:part name="parameters" element="tns:OngameInteruptedResponse" />
-  </wsdl:message>
-  <wsdl:message name="IGame_OnCountGuessTimes_OutputCallbackMessage">
-    <wsdl:part name="parameters" element="tns:OnCountGuessTimes" />
-  </wsdl:message>
-  <wsdl:message name="IGame_OnCountGuessTimes_InputCallbackMessage">
-    <wsdl:part name="parameters" element="tns:OnCountGuessTimesResponse" />
+  <wsdl:message name="IGame_OnGameInterupted_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnGameInteruptedResponse" />
   </wsdl:message>
   <wsdl:message name="IGame_OnWinner_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:OnWinner" />
@@ -50,29 +33,17 @@
     <wsdl:part name="parameters" element="tns:OnWinnerResponse" />
   </wsdl:message>
   <wsdl:portType name="IGame">
-    <wsdl:operation name="checkNumber">
-      <wsdl:input wsaw:Action="Server/IGame/checkNumber" message="tns:IGame_checkNumber_InputMessage" />
-      <wsdl:output wsaw:Action="Server/IGame/checkNumberResponse" message="tns:IGame_checkNumber_OutputMessage" />
+    <wsdl:operation name="CheckNumber">
+      <wsdl:input wsaw:Action="Server/IGame/CheckNumber" message="tns:IGame_CheckNumber_InputMessage" />
+      <wsdl:output wsaw:Action="Server/IGame/CheckNumberResponse" message="tns:IGame_CheckNumber_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="countGuessTimes">
-      <wsdl:input wsaw:Action="Server/IGame/countGuessTimes" message="tns:IGame_countGuessTimes_InputMessage" />
-      <wsdl:output wsaw:Action="Server/IGame/countGuessTimesResponse" message="tns:IGame_countGuessTimes_OutputMessage" />
+    <wsdl:operation name="QuitGame">
+      <wsdl:input wsaw:Action="Server/IGame/QuitGame" message="tns:IGame_QuitGame_InputMessage" />
+      <wsdl:output wsaw:Action="Server/IGame/QuitGameResponse" message="tns:IGame_QuitGame_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="quitGame">
-      <wsdl:input wsaw:Action="Server/IGame/quitGame" message="tns:IGame_quitGame_InputMessage" />
-      <wsdl:output wsaw:Action="Server/IGame/quitGameResponse" message="tns:IGame_quitGame_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="winner">
-      <wsdl:input wsaw:Action="Server/IGame/winner" message="tns:IGame_winner_InputMessage" />
-      <wsdl:output wsaw:Action="Server/IGame/winnerResponse" message="tns:IGame_winner_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="OngameInterupted">
-      <wsdl:output wsaw:Action="Server/IGame/OngameInterupted" message="tns:IGame_OngameInterupted_OutputCallbackMessage" />
-      <wsdl:input wsaw:Action="Server/IGame/OngameInteruptedResponse" message="tns:IGame_OngameInterupted_InputCallbackMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="OnCountGuessTimes">
-      <wsdl:output wsaw:Action="Server/IGame/OnCountGuessTimes" message="tns:IGame_OnCountGuessTimes_OutputCallbackMessage" />
-      <wsdl:input wsaw:Action="Server/IGame/OnCountGuessTimesResponse" message="tns:IGame_OnCountGuessTimes_InputCallbackMessage" />
+    <wsdl:operation name="OnGameInterupted">
+      <wsdl:output wsaw:Action="Server/IGame/OnGameInterupted" message="tns:IGame_OnGameInterupted_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="Server/IGame/OnGameInteruptedResponse" message="tns:IGame_OnGameInterupted_InputCallbackMessage" />
     </wsdl:operation>
     <wsdl:operation name="OnWinner">
       <wsdl:output wsaw:Action="Server/IGame/OnWinner" message="tns:IGame_OnWinner_OutputCallbackMessage" />
