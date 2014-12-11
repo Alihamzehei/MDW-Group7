@@ -1,8 +1,0 @@
-C:\Users\Alex\Documents\GitHub\MDW-Group7\MDW_GuessNumberGame\MDW_GuessNumberGame\obj\Debug\Service.csprojResolveAssemblyReference.cache
-C:\Users\Joy\Documents\GitHub\MDW-Group7\MDW_GuessNumberGame\MDW_GuessNumberGame\obj\Debug\Service.csprojResolveAssemblyReference.cache
-C:\Users\Joy\Documents\GitHub\MDW-Group7\MDW_GuessNumberGame\MDW_GuessNumberGame\bin\Debug\MDW_GuessNumberGame.dll.config
-C:\Users\Joy\Documents\GitHub\MDW-Group7\MDW_GuessNumberGame\MDW_GuessNumberGame\bin\Debug\MDW_GuessNumberGame.dll
-C:\Users\Joy\Documents\GitHub\MDW-Group7\MDW_GuessNumberGame\MDW_GuessNumberGame\bin\Debug\MDW_GuessNumberGame.pdb
-C:\Users\Joy\Documents\GitHub\MDW-Group7\MDW_GuessNumberGame\MDW_GuessNumberGame\bin\Debug\mysql.data.dll
-C:\Users\Joy\Documents\GitHub\MDW-Group7\MDW_GuessNumberGame\MDW_GuessNumberGame\obj\Debug\MDW_GuessNumberGame.dll
-C:\Users\Joy\Documents\GitHub\MDW-Group7\MDW_GuessNumberGame\MDW_GuessNumberGame\obj\Debug\MDW_GuessNumberGame.pdb

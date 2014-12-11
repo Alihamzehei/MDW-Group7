@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "GuessNumberGame\Server.csproj", "{15B3E0D2-6217-493A-A690-158C497F5318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{279DB0EF-31EF-4306-A5D3-E89E1EEC8EDA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{15B3E0D2-6217-493A-A690-158C497F5318} = {15B3E0D2-6217-493A-A690-158C497F5318}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sequence Diagrams", "Sequence Diagrams", "{483D8AEA-CD88-4C3E-A3EC-2E3CF5D30C88}"
+	ProjectSection(SolutionItems) = preProject
+		Sequence Diagrams\SequenceDiagram_LogIn.sequencediagram = Sequence Diagrams\SequenceDiagram_LogIn.sequencediagram
+		Sequence Diagrams\SequenceDiagram_Register.sequencediagram = Sequence Diagrams\SequenceDiagram_Register.sequencediagram
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{279DB0EF-31EF-4306-A5D3-E89E1EEC8EDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{279DB0EF-31EF-4306-A5D3-E89E1EEC8EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{279DB0EF-31EF-4306-A5D3-E89E1EEC8EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{279DB0EF-31EF-4306-A5D3-E89E1EEC8EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
