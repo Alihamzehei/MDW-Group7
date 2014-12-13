@@ -10,8 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sequence Diagrams", "Sequence Diagrams", "{483D8AEA-CD88-4C3E-A3EC-2E3CF5D30C88}"
 	ProjectSection(SolutionItems) = preProject
-		SequenceDiagram_LogIn.sequencediagram = SequenceDiagram_LogIn.sequencediagram
-		SequenceDiagram_Register.sequencediagram = SequenceDiagram_Register.sequencediagram
+		Sequence Diagrams\SequenceDiagram_Game.sequencediagram = Sequence Diagrams\SequenceDiagram_Game.sequencediagram
+		SequenceDiagram_GameInterupted.sequencediagram = SequenceDiagram_GameInterupted.sequencediagram
+		Sequence Diagrams\SequenceDiagram_LogIn.sequencediagram = Sequence Diagrams\SequenceDiagram_LogIn.sequencediagram
+		Sequence Diagrams\SequenceDiagram_Register.sequencediagram = Sequence Diagrams\SequenceDiagram_Register.sequencediagram
 	EndProjectSection
 EndProject
 Global

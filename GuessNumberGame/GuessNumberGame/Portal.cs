@@ -10,14 +10,37 @@ namespace Server
 {
     class Portal : IPortal
     {
-        private List<Player> OnlinePlayers;
+        private List<Player> onlinePlayers;
         private DataHelper dh;
-        private Game game;
+        private List<Game> gamesList;
 
         public Portal()
         {
-            OnlinePlayers = new List<Player>();
+            onlinePlayers = new List<Player>();
             dh = new DataHelper();
+            gamesList = new List<Game>();
+        }
+
+        public Player Player
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        internal DataHelper DataHelper
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
         }
 
         /// <summary>
@@ -58,7 +81,8 @@ namespace Server
         {
             if (receiver.PortalCallback.OnInvitation(sender))
             {
-                game = new Game(sender, receiver);
+                Game game = new Game(sender, receiver);
+                gamesList.Add(game);
                 return true;
             }
             else
@@ -73,8 +97,11 @@ namespace Server
         /// <param name="p">The player of the game.</param>
         public void UserLogOut(Player player)
         {
-            player.PortalCallback.OnLoggingOut(player);
-            OnlinePlayers.Remove(player);
+            foreach (Player p in onlinePlayers)
+            {
+                p.PortalCallback.OnLoggingOut(player);
+            }
+            onlinePlayers.Remove(player);
         }
 
         /// <summary>
@@ -85,7 +112,10 @@ namespace Server
         /// <returns>A string with the player and the sent message.</returns>
         public void ChatMessage(Player player, string message)
         {
-            player.PortalCallback.OnMessage(player.Username + ": " + message);
+            foreach (Player p in onlinePlayers)
+            {
+                p.PortalCallback.OnMessage(player.Username + ": " + message);
+            }
         }
     }
 }

@@ -7,6 +7,15 @@
           <comment Id="9953d1a3-73f6-4db5-a3b5-38155e599854">
             <body>If True</body>
           </comment>
+          <comment Id="7d5944c9-169e-4231-9d10-4923a94d5888">
+            <body>CLIENT 1</body>
+          </comment>
+          <comment Id="8b6429f9-76bf-4e85-927f-e1f44d9d7f8e">
+            <body>CLIENT 2</body>
+          </comment>
+          <comment Id="7c8a91b6-f30d-4146-987d-d209dc29d3c8">
+            <body>	       SERVER</body>
+          </comment>
         </ownedCommentsInternal>
         <fragments>
           <behaviorExecutionSpecification Id="2c770ec2-4667-484a-b6be-4852c6babd67" name="BehaviorExecutionSpecification">
@@ -82,14 +91,14 @@
               <lifelineMoniker Id="dde172ac-d41c-4ee7-8dff-8c0509fba405" LastKnownName="DataHelper" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="fa63f3a9-edcf-4724-b14e-16d870cbe3d1" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="dde172ac-d41c-4ee7-8dff-8c0509fba405" LastKnownName="DataHelper" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="0fd52df4-21d6-48a2-9f0f-dd13bf7e4758" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="a3e46656-45e6-40e7-ae94-cce9b3bb4893" LastKnownName="Portal" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="fa63f3a9-edcf-4724-b14e-16d870cbe3d1" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="dde172ac-d41c-4ee7-8dff-8c0509fba405" LastKnownName="DataHelper" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="26703b43-dd43-4550-ab4b-fe29b4482635" name="ExecutionOccurrenceSpecification">
@@ -146,14 +155,14 @@
               <lifelineMoniker Id="a0b59760-886a-4305-8307-9d151ccf42a0" LastKnownName="Lobby Form" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="4658294c-adde-4bc4-ad3e-e82cd779de48" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="a3e46656-45e6-40e7-ae94-cce9b3bb4893" LastKnownName="Portal" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="8d2e2d53-b31c-4759-a3b6-329b8abfe893" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="ff020752-41c2-431a-a6dd-a1860d6641b2" LastKnownName="LogIn Form" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="4658294c-adde-4bc4-ad3e-e82cd779de48" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a3e46656-45e6-40e7-ae94-cce9b3bb4893" LastKnownName="Portal" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="309e5fe3-3c3b-4357-a0c4-b5e8b76ddaf8" name="ExecutionOccurrenceSpecification">

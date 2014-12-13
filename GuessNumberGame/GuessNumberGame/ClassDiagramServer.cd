@@ -10,24 +10,31 @@
   <Class Name="Server.Game" BaseTypeListCollapsed="true">
     <Position X="6.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>wAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAAAEAAAAAAAAQ=</HashCode>
+      <HashCode>wAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAAAEAAAQAAAAQ=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Player" />
+    </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Server.Player">
     <Position X="5.25" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAEAAAAAEAAAAAAAAAAAQAAAAAgEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAQAQAEAAEABAAAAAACAAAAEgAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Server.Portal" BaseTypeListCollapsed="true">
     <Position X="4.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAABAAAAAAAgAAIABEABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAABAABAAAAQAAgAAIABEABAIAAAAAQAAAAA=</HashCode>
       <FileName>Portal.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Player" />
+      <Property Name="DataHelper" />
+    </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="Server.IGame">
@@ -40,7 +47,7 @@
   <Interface Name="Server.IGameCallBack">
     <Position X="8.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAACAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IGame.cs</FileName>
     </TypeIdentifier>
   </Interface>

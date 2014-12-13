@@ -7,10 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.Serialization;
+using System.ServiceModel;
+using Server;
+using Client.ServicePortal;
 
 namespace Client
 {
-    public partial class Lobby : Form
+    public partial class Lobby : Form, IPortalCallback
     {
         public Lobby()
         {

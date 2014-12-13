@@ -7,10 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.Serialization;
+using System.ServiceModel;
+using Server;
+using Client.ServiceGame;
+
 
 namespace Client
 {
-    public partial class PlayGame : Form
+    public partial class PlayGame : Form, IGameCallBack
     {
         public PlayGame()
         {

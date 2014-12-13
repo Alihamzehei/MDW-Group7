@@ -41,10 +41,22 @@ namespace Server
             set { player2 = value; }
         }
 
+        public Player Player
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public string CheckNumber(int[] playersGuess, Player player)
         {
             int A = 0;
             int B = 0;
+            string result;
 
             //we can get rid of the following if we pass directly playersGuess as int[]
             //don't know yet what this piece of code does
@@ -81,7 +93,17 @@ namespace Server
                 }
             }
 
-            return A.ToString() + " numbers correct \n" + B.ToString() + "numbers in wrong place";
+            result = A.ToString() + " numbers correct \n" + B.ToString() + "numbers in wrong place";
+
+            if (player == player1)
+            {
+                player2.GameCallback.OnOpponentGuess(result);
+            }
+            else if (player == player2)
+            {
+                player1.GameCallback.OnOpponentGuess(result);
+            }
+            return result;
         }
 
         public void QuitGame(Player player)
